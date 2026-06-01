@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abid Hasan — Computer Science student portfolio. Projects, skills, and contact.">
+  <title>Abid Hasan | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/gradients.css">
+  <link rel="stylesheet" href="/css/animations.css">
+</head>
+
+<body>
+  <div class="bg-gradient" aria-hidden="true">
+    <div class="bg-gradient__layer"></div>
+    <div class="bg-gradient__layer bg-gradient__layer--secondary"></div>
+    <div class="gradient-orb gradient-orb--1"></div>
+    <div class="gradient-orb gradient-orb--2"></div>
+    <div class="gradient-orb gradient-orb--3"></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="nav__logo" href="#hero">Abid Hasan</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#education">Education</a></li>
+        <li><a class="nav__link" href="#achievements">Awards</a></li>
+        <li><a class="nav__link" href="#certifications">Certs</a></li>
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="#testimonials">Reviews</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+        <li><a class="nav__link nav__link--cta" href="/assets/resume.pdf" target="_blank"
+            rel="noopener noreferrer">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="hero">
+      <div class="container">
+        <div class="hero__card reveal">
+          <div class="hero__grid">
+            <div class="hero__content">
+              <p class="hero__eyebrow">Portfolio</p>
+              <h1 class="hero__title">Abid Hasan</h1>
+              <p class="hero__role">Computer Science Student & Aspiring AI/ML Engineer</p>
+              <p class="hero__tagline">
+                Building intelligent systems with a focus on Deep Learning and clean software engineering. Passionate
+                about solving complex problems and continuous learning in the AI space.
+              </p>
+              <div class="hero__actions">
+                <a class="btn btn--primary" href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">View
+                  Resume</a>
+                <a class="btn btn--secondary" href="/assets/resume.pdf" download="Abid-Hasan-Resume.pdf">Download
+                  PDF</a>
+                <a class="btn btn--outline" href="#contact">Contact Me</a>
+              </div>
+              <div class="hero__social">
+                <a href="https://github.com/hasan2733" class="social-link" target="_blank" rel="noopener noreferrer"
+                  aria-label="GitHub profile">
+                  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                    <path fill="currentColor"
+                      d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.166 6.839 9.492.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+                <a href="www.linkedin.com/in/abidhasan720" class="social-link" target="_blank" rel="noopener noreferrer"
+                  aria-label="LinkedIn profile">
+                  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                    <path fill="currentColor"
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+                <a href="mailto:abid.hasan.tng@gmail.com" class="social-link" aria-label="Send email">
+                  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                    <path fill="currentColor"
+                      d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="hero__photo-wrap">
+              <img class="hero__photo" src="/assets/images/profile-placeholder.jpg"
+                alt="Abid Hasan — profile photo placeholder" width="320" height="320" fetchpriority="high">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">About</h2>
+          <p class="section__subtitle">A little about who I am</p>
+        </header>
+        <div class="about__content card-surface reveal">
+          <p>
+            I am a third-year Computer Science and Engineering undergraduate at Southeast University and a 100%
+            merit-based scholarship recipient.
+            I have developed a strong foundation in C++, Data Structures, and Algorithms, which fuels my passion for
+            software engineering and technical problem-solving.
+          </p>
+          <p>
+            My experience includes building versatile applications, such as a Movie Ticket Management System using
+            JavaFX and a BMI & BMR Calculator for Android integrated with Firebase.
+            I am proficient in Java, Python, and SQL, and I enjoy creating well-structured software that bridge the
+            gap between complex backend logic and user-friendly interfaces.
+          </p>
+          <p>
+            Currently, I am specializing in Artificial Intelligence and Deep Learning, with hands-on experience in
+            neural network architectures like ANN, CNN, and RNN.
+            My goal is to contribute to AI research and build intelligent systems that solve real-world challenges
+            through continuous learning and collaboration. My main goal is to secure a internship in the field of AI/ML.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="education">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Education</h2>
+          <p class="section__subtitle">Academic journey</p>
+        </header>
+        <div class="education-timeline">
+          <article class="education-card education-card--large reveal">
+            <span class="education-card__badge">University</span>
+            <div class="education-card__header">
+              <h3 class="education-card__degree">Bachelor of Science in Computer Science and Engineering</h3>
+              <span class="education-card__dates">October 2023 — Present</span>
+            </div>
+            <p class="education-card__school">Southeast University</p>
+            <ul class="education-card__list">
+              <li>Coursework: Data Structures & Algorithms, Java Programming, Software Engineering, Computer Networking, and Digital Logic Design</li>
+              <li>CGPA: 4.00 (Current)</li>
+              <li>Expected graduation: 2027</li>
+            </ul>
+          </article>
+
+          <article class="education-card education-card--large reveal">
+            <span class="education-card__badge">College</span>
+            <div class="education-card__header">
+              <h3 class="education-card__degree">Higher Secondary / Intermediate</h3>
+              <span class="education-card__dates">2020 — 2022</span>
+            </div>
+            <p class="education-card__school">Major General Mahamudul Hasan Adarsha College, Tangail</p>
+            <ul class="education-card__list">
+              <li>Major subjects: Mathematics, Physics, and Chemistry.</li>
+              <li>Strong foundation in analytical and problem-solving skills.</li>
+              <li>GPA: 5.00</li>
+            </ul>
+          </article>
+
+          <article class="education-card education-card--large reveal">
+            <span class="education-card__badge">High School</span>
+            <div class="education-card__header">
+              <h3 class="education-card__degree">Secondary School Certificate</h3>
+              <span class="education-card__dates">2015 — 2020</span>
+            </div>
+            <p class="education-card__school">Bindubashini Govt. Boys' High School, Tangail</p>
+            <ul class="education-card__list">
+              <li>General curriculum with early interest in technology</li>
+              <li>Built habits of discipline and consistent study</li>
+              <li>GPA: 5.00</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Achievements</h2>
+          <p class="section__subtitle">Milestones and recognition</p>
+        </header>
+        <div class="achievements-grid">
+          <article class="achievement-card reveal">
+            <div class="achievement-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28">
+                <path fill="currentColor" d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6L5.7 21l2.3-7-6-4.6h7.6z" />
+              </svg>
+            </div>
+            <h3 class="achievement-card__title">Dean&apos;s List</h3>
+            <p class="achievement-card__desc">Recognized for academic excellence for consecutive semesters.</p>
+            <span class="achievement-card__year">2024</span>
+          </article>
+          <article class="achievement-card reveal">
+            <div class="achievement-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28">
+                <path fill="currentColor" d="M4 6h16v2H4V6zm2 5h12v2H6v-2zm-2 5h16v2H4v-2z" />
+              </svg>
+            </div>
+            <h3 class="achievement-card__title">Hackathon Participant</h3>
+            <p class="achievement-card__desc">Competed in university hackathon; built a working prototype in 24 hours.
+            </p>
+            <span class="achievement-card__year">2023</span>
+          </article>
+          <article class="achievement-card reveal">
+            <div class="achievement-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28">
+                <path fill="currentColor"
+                  d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13.5L4 12v2.5l8 4.5 8-4.5V12l-8 4.5z" />
+              </svg>
+            </div>
+            <h3 class="achievement-card__title">Programming Competition</h3>
+            <p class="achievement-card__desc">Top 20% finish in inter-college coding contest.</p>
+            <span class="achievement-card__year">2022</span>
+          </article>
+          <article class="achievement-card reveal">
+            <div class="achievement-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28">
+                <path fill="currentColor"
+                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
+              </svg>
+            </div>
+            <h3 class="achievement-card__title">Leadership Award</h3>
+            <p class="achievement-card__desc">Led a peer study group for data structures and algorithms.</p>
+            <span class="achievement-card__year">2023</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="certifications">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Certifications</h2>
+          <p class="section__subtitle">Online courses and credentials</p>
+        </header>
+        <div class="cert-grid">
+          <article class="cert-card reveal">
+            <span class="cert-card__platform">Coursera</span>
+            <h3 class="cert-card__title">Java Programming and Software Engineering</h3>
+            <p class="cert-card__desc">Object-oriented programming, testing, and design fundamentals.</p>
+            <span class="cert-card__date">2024</span>
+          </article>
+          <article class="cert-card reveal">
+            <span class="cert-card__platform">Udemy</span>
+            <h3 class="cert-card__title">Spring Boot Microservices</h3>
+            <p class="cert-card__desc">REST APIs, dependency injection, and production-ready patterns.</p>
+            <span class="cert-card__date">2024</span>
+          </article>
+          <article class="cert-card reveal">
+            <span class="cert-card__platform">freeCodeCamp</span>
+            <h3 class="cert-card__title">Responsive Web Design</h3>
+            <p class="cert-card__desc">HTML, CSS, Flexbox, Grid, and accessible layouts.</p>
+            <span class="cert-card__date">2023</span>
+          </article>
+          <article class="cert-card reveal">
+            <span class="cert-card__platform">Google Cloud Skills</span>
+            <h3 class="cert-card__title">Cloud Fundamentals</h3>
+            <p class="cert-card__desc">Core cloud concepts, storage, and deployment basics.</p>
+            <span class="cert-card__date">2023</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__subtitle">Technologies I work with</p>
+        </header>
+        <div class="skills-grid reveal">
+          <div class="skills-group card-surface">
+            <h3 class="skills-group__title">Languages</h3>
+            <ul class="chip-list">
+              <li class="chip">Java</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">SQL</li>
+            </ul>
+          </div>
+          <div class="skills-group card-surface">
+            <h3 class="skills-group__title">Frameworks &amp; Tools</h3>
+            <ul class="chip-list">
+              <li class="chip">Spring Boot</li>
+              <li class="chip">Maven</li>
+              <li class="chip">Git</li>
+              <li class="chip">Firebase</li>
+              <li class="chip">REST APIs</li>
+            </ul>
+          </div>
+          <div class="skills-group card-surface">
+            <h3 class="skills-group__title">Concepts</h3>
+            <ul class="chip-list">
+              <li class="chip">OOP</li>
+              <li class="chip">Responsive Design</li>
+              <li class="chip">Version Control</li>
+              <li class="chip">Problem Solving</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__subtitle">Selected work and experiments</p>
+        </header>
+        <div class="projects-grid">
+          <article class="project-card project-card--has-bg reveal"
+            style="--project-bg: url('/assets/images/projects/project-1.jpg')">
+            <div class="project-card__media" role="img" aria-label="Portfolio project preview"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Portfolio Website</h3>
+              <p class="project-card__desc">
+                Responsive portfolio with Spring Boot backend, Firebase Firestore, and SMTP notifications.
+              </p>
+              <ul class="chip-list chip-list--sm">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">Spring Boot</li>
+                <li class="chip">Firebase</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--has-bg reveal"
+            style="--project-bg: url('/assets/images/projects/project-2.jpg')">
+            <div class="project-card__media" role="img" aria-label="Task Manager API preview"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Task Manager API</h3>
+              <p class="project-card__desc">
+                RESTful API with CRUD operations, validation, and Spring Boot best practices.
+              </p>
+              <ul class="chip-list chip-list--sm">
+                <li class="chip">Java</li>
+                <li class="chip">Spring Boot</li>
+                <li class="chip">REST</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--has-bg reveal"
+            style="--project-bg: url('/assets/images/projects/project-3.jpg')">
+            <div class="project-card__media" role="img" aria-label="Weather Dashboard preview"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Weather Dashboard</h3>
+              <p class="project-card__desc">
+                Frontend app fetching weather from a public API with a mobile-friendly layout.
+              </p>
+              <ul class="chip-list chip-list--sm">
+                <li class="chip">JavaScript</li>
+                <li class="chip">CSS</li>
+                <li class="chip">APIs</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Source Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Testimonials</h2>
+          <p class="section__subtitle">What mentors and experts say</p>
+        </header>
+        <div class="testimonials-scroll">
+          <article class="testimonial-card reveal">
+            <img class="testimonial-card__photo" src="/assets/images/testimonials/expert-1.jpg" alt="Dr. Jane Smith"
+              width="72" height="72" loading="lazy">
+            <blockquote class="testimonial-card__quote">
+              <p>&ldquo;Abid demonstrates strong analytical thinking and consistently delivers clean, well-documented
+                code. He would be an asset to any engineering team.&rdquo;</p>
+            </blockquote>
+            <cite class="testimonial-card__cite">
+              <span class="testimonial-card__name">Dr. Jane Smith</span>
+              <span class="testimonial-card__role">Senior Software Engineer, TechCorp</span>
+            </cite>
+          </article>
+          <article class="testimonial-card reveal">
+            <img class="testimonial-card__photo" src="/assets/images/testimonials/expert-2.jpg" alt="Michael Chen"
+              width="72" height="72" loading="lazy">
+            <blockquote class="testimonial-card__quote">
+              <p>&ldquo;A dedicated learner with excellent communication skills. Abid asks thoughtful questions and
+                applies feedback quickly on group projects.&rdquo;</p>
+            </blockquote>
+            <cite class="testimonial-card__cite">
+              <span class="testimonial-card__name">Michael Chen</span>
+              <span class="testimonial-card__role">Engineering Manager, CloudWorks</span>
+            </cite>
+          </article>
+          <article class="testimonial-card reveal">
+            <img class="testimonial-card__photo" src="/assets/images/testimonials/expert-3.jpg"
+              alt="Prof. Sarah Williams" width="72" height="72" loading="lazy">
+            <blockquote class="testimonial-card__quote">
+              <p>&ldquo;Among my students, Abid stands out for initiative and reliability. His portfolio reflects both
+                technical skill and professional presentation.&rdquo;</p>
+            </blockquote>
+            <cite class="testimonial-card__cite">
+              <span class="testimonial-card__name">Prof. Sarah Williams</span>
+              <span class="testimonial-card__role">Faculty Advisor, University CS Dept.</span>
+            </cite>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">Send me a message</p>
+        </header>
+        <div class="contact-layout reveal">
+          <div class="contact-info card-surface">
+            <p>
+              I am open to collaboration, internship opportunities, and questions about my work.
+              Fill out the form or reach me directly.
+            </p>
+            <p class="contact-info__email">
+              <strong>Email:</strong>
+              <a href="mailto:abid.hasan@example.com">abid.hasan@example.com</a>
+            </p>
+          </div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required maxlength="100"
+                placeholder="Your name">
+              <span class="form-error" id="error-name" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required maxlength="254"
+                placeholder="you@example.com">
+              <span class="form-error" id="error-email" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required maxlength="2000"
+                placeholder="Your message..."></textarea>
+              <span class="form-error" id="error-message" role="alert"></span>
+            </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn--primary btn--block" id="submit-btn">
+              <span class="btn__text">Send Message</span>
+              <span class="btn__loading" hidden>Sending...</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year"></span> Abid Hasan. All rights reserved.</p>
+      <div class="site-footer__links">
+        <a href="#hero" class="footer-link">Back to top</a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/animations.js"></script>
+  <script src="/js/contact.js"></script>
+</body>
+
+</html>

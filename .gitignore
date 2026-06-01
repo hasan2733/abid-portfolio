@@ -1,0 +1,16 @@
+target/
+.idea/
+*.iml
+.vscode/
+*.class
+*.log
+
+# Secrets
+src/main/resources/application.properties
+firebase-service-account.json
+**/firebase-service-account*.json
+!**/firebase-service-account.json.example
+
+# OS
+.DS_Store
+Thumbs.db

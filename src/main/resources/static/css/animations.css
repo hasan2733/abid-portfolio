@@ -1,0 +1,42 @@
+/* Reveal animations — disabled when user prefers reduced motion */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .btn:hover,
+  .project-card:hover,
+  .social-link:hover,
+  .education-card--large:hover,
+  .achievement-card:hover,
+  .testimonial-card:hover,
+  .cert-card:hover {
+    transform: none;
+  }
+
+  .bg-gradient__layer,
+  .gradient-orb {
+    animation: none !important;
+  }
+
+  .gradient-orb {
+    opacity: 0.2;
+  }
+}
