@@ -54,10 +54,15 @@ In Netlify: **Site configuration** → **Forms** → enable email notifications 
 
 ## Deploy to GitHub Pages
 
-1. Repo → **Settings** → **Pages** → Source: GitHub Actions (or branch `main`, folder `/src/main/resources/static` if your plan allows).
-2. Use a workflow that publishes `src/main/resources/static` (or copy files to `docs/`).
-3. For a custom domain, add a `CNAME` file and configure DNS.
-4. Contact form: switch to [Formspree](https://formspree.io) (GitHub Pages has no built-in forms).
+GitHub Pages only serves files from the **repo root**, **`/docs`**, or a **GitHub Actions** artifact. This project keeps the site under `src/main/resources/static/` (legacy Maven layout), so branch-based “folder” deploy will not work for that path.
+
+1. Push this repo to GitHub (include [`.github/workflows/pages.yml`](.github/workflows/pages.yml)).
+2. Repo → **Settings** → **Pages** → **Build and deployment** → **Source:** **GitHub Actions**.
+3. Push to `main` (or run the **Deploy GitHub Pages** workflow manually). The workflow uploads `src/main/resources/static` as the site root (`index.html`, `css/`, `js/`, `assets/` at `/`).
+4. **Custom domain** (`abidhasan27.me`): [`src/main/resources/static/CNAME`](src/main/resources/static/CNAME) is deployed with the site. In **Pages** settings, set the custom domain and add the DNS records GitHub shows (A/CNAME at your registrar).
+5. **Contact form:** Netlify Forms do not run on GitHub Pages. Use [Formspree](https://formspree.io) or keep Netlify for the form only.
+
+Do **not** set Pages source to “Deploy from branch” with folder `/src/main/resources/static` — that folder is not an allowed publish root.
 
 ## Customize content
 
