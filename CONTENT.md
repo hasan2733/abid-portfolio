@@ -1,6 +1,6 @@
 # Customize your portfolio content
 
-Replace placeholder values in `src/main/resources/static/index.html` and swap image files under `assets/images/`.
+Replace placeholder values in `docs/index.html` and swap image files under `docs/assets/images/`.
 
 ## Checklist
 
@@ -14,7 +14,7 @@ Replace placeholder values in `src/main/resources/static/index.html` and swap im
 - [ ] **Skills** — Update chip lists
 - [ ] **Projects** — Titles, descriptions, tech, demo/repo URLs
 - [ ] **Testimonials** — Real quotes from mentors (replace placeholder experts)
-- [ ] **Resume** — Replace `src/main/resources/static/assets/resume.pdf`
+- [ ] **Resume** — Replace `docs/assets/resume.pdf`
 
 ## Image paths
 

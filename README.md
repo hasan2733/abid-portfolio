@@ -26,7 +26,7 @@ npm start
 ```
 
 ```bash
-python3 -m http.server 8080 --directory src/main/resources/static
+python3 -m http.server 8080 --directory docs
 ```
 
 Open [http://localhost:8080](http://localhost:8080)
@@ -42,7 +42,7 @@ If port 8080 is busy, stop the old process: `fuser -k 8080/tcp`
 1. Push this repo to GitHub.
 2. Sign in at [Netlify](https://www.netlify.com/) → **Add new site** → **Import from Git**.
 3. Build settings are read from [`netlify.toml`](netlify.toml):
-   - **Publish directory:** `src/main/resources/static`
+   - **Publish directory:** `docs`
    - **Build command:** none (static site)
 4. Deploy. Netlify auto-detects the contact form from `data-netlify="true"` on the form in `index.html`.
 5. **Custom domain:** Site settings → Domain management → Add your domain → set DNS at your registrar (Netlify docs show A/CNAME records).
@@ -54,45 +54,60 @@ In Netlify: **Site configuration** → **Forms** → enable email notifications 
 
 ## Deploy to GitHub Pages
 
-GitHub Pages only serves files from the **repo root**, **`/docs`**, or a **GitHub Actions** artifact. This project keeps the site under `src/main/resources/static/` (legacy Maven layout), so branch-based “folder” deploy will not work for that path.
+The live site files are in [`docs/`](docs/) (`index.html`, `css/`, `js/`, `assets/`).
 
-1. Push this repo to GitHub (include [`.github/workflows/pages.yml`](.github/workflows/pages.yml)).
-2. Repo → **Settings** → **Pages** → **Build and deployment** → **Source:** **GitHub Actions**.
-3. Push to `main` (or run the **Deploy GitHub Pages** workflow manually). The workflow uploads `src/main/resources/static` as the site root (`index.html`, `css/`, `js/`, `assets/` at `/`).
-4. **Custom domain** (`abidhasan27.me`): [`src/main/resources/static/CNAME`](src/main/resources/static/CNAME) is deployed with the site. In **Pages** settings, set the custom domain and add the DNS records GitHub shows (A/CNAME at your registrar).
-5. **Contact form:** Netlify Forms do not run on GitHub Pages. Use [Formspree](https://formspree.io) or keep Netlify for the form only.
+**If you only see this README on your site:** Pages is publishing the **repo root** (`/`), which has no `index.html`. GitHub then shows `README.md` instead of the portfolio.
 
-Do **not** set Pages source to “Deploy from branch” with folder `/src/main/resources/static` — that folder is not an allowed publish root.
+### Option A — Deploy from branch (simplest)
+
+1. Push this repo to GitHub.
+2. **Settings** → **Pages** → **Build and deployment**
+3. **Source:** Deploy from a branch
+4. **Branch:** `main` · **Folder:** `/docs` (not `/ (root)`)
+5. Save. After a minute, open your Pages URL — you should see the portfolio.
+
+**Custom domain** (`abidhasan27.me`): [`docs/CNAME`](docs/CNAME) is included. In Pages settings, set the custom domain and configure DNS as GitHub instructs.
+
+### Option B — GitHub Actions
+
+1. **Settings** → **Pages** → **Source:** **GitHub Actions**
+2. Push to `main` (workflow: [`.github/workflows/pages.yml`](.github/workflows/pages.yml))
+3. Check the **Actions** tab for a green **Deploy GitHub Pages** run
+
+### Contact form on GitHub Pages
+
+Netlify Forms do not run on GitHub Pages. Use [Formspree](https://formspree.io) or keep Netlify for hosting.
 
 ## Customize content
 
-Edit [`src/main/resources/static/index.html`](src/main/resources/static/index.html) for your name, bio, education, skills, projects, and social links.
+Edit [`docs/index.html`](docs/index.html) for your name, bio, education, skills, projects, and social links.
 
 Place assets:
 
 | File | Path |
 |------|------|
-| Resume PDF | `src/main/resources/static/assets/resume.pdf` |
-| Profile photo | `src/main/resources/static/assets/images/profile-placeholder.jpg` |
-| Project images | `src/main/resources/static/assets/images/projects/` |
+| Resume PDF | `docs/assets/resume.pdf` |
+| Profile photo | `docs/assets/images/profile-placeholder.jpg` |
+| Project images | `docs/assets/images/projects/` |
 
 ## Project structure
 
 ```
-netlify.toml                          # Netlify publish path
-src/main/resources/static/
-  index.html                          # Main page
-  css/                                # styles, gradients, animations, futuristic
-  js/                                 # main, animations, particles, contact
-  assets/                             # resume, images
+docs/                                 # Site root (GitHub Pages / Netlify)
+  index.html
+  css/
+  js/
+  assets/
+netlify.toml                          # Netlify publish path → docs
+.github/workflows/pages.yml           # Optional GitHub Actions deploy
 ```
 
 ## Animation files
 
 | File | Purpose |
 |------|---------|
-| `css/gradients.css` | Animated background orbs |
-| `css/animations.css` | Scroll reveal |
-| `css/futuristic.css` | Grid overlay, hero entrance, nav underline, card glow |
-| `js/animations.js` | Reveal observer, hero typewriter |
-| `js/particles.js` | Hero particle network (disabled when reduced motion) |
+| `docs/css/gradients.css` | Animated background orbs |
+| `docs/css/animations.css` | Scroll reveal |
+| `docs/css/futuristic.css` | Grid overlay, hero entrance, nav underline, card glow |
+| `docs/js/animations.js` | Reveal observer, hero typewriter |
+| `docs/js/particles.js` | Hero particle network (disabled when reduced motion) |

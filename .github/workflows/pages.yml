@@ -1,4 +1,4 @@
-# Publish the static site from src/main/resources/static (GitHub Pages cannot use that path directly).
+# Publish the static site from docs/ (GitHub Pages standard folder).
 name: Deploy GitHub Pages
 
 on:
@@ -31,7 +31,7 @@ jobs:
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: src/main/resources/static
+          path: docs
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -3,7 +3,7 @@
   "private": true,
   "description": "Static personal portfolio",
   "scripts": {
-    "start": "python3 -m http.server 8080 --directory src/main/resources/static",
+    "start": "python3 -m http.server 8080 --directory docs",
     "preview": "npm run start"
   }
 }
