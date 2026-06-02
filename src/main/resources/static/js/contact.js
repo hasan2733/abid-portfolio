@@ -89,12 +89,21 @@
     formStatus.className = "form-status is-" + type;
   }
 
+  function encodeFormBody(data) {
+    const params = new URLSearchParams();
+    Object.keys(data).forEach(function (key) {
+      params.append(key, data[key]);
+    });
+    return params.toString();
+  }
+
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     if (!validateClient()) return;
 
     const payload = {
+      "form-name": "contact",
       name: fields.name.input.value.trim(),
       email: fields.email.input.value.trim(),
       message: fields.message.input.value.trim(),
@@ -104,44 +113,27 @@
     clearErrors();
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeFormBody(payload),
       });
 
-      const data = await response.json().catch(function () {
-        return {};
-      });
-
-      if (response.ok && data.success) {
+      if (response.ok) {
         showStatus(
-          data.message || "Thank you! Your message has been sent.",
+          "Thank you! Your message has been sent successfully.",
           "success"
         );
         form.reset();
-      } else if (response.status === 400 && data.errors) {
-        data.errors.forEach(function (err) {
-          const lower = err.toLowerCase();
-          if (lower.startsWith("name:")) {
-            setFieldError("name", err.replace(/^name:\s*/i, ""));
-          } else if (lower.startsWith("email:")) {
-            setFieldError("email", err.replace(/^email:\s*/i, ""));
-          } else if (lower.startsWith("message:")) {
-            setFieldError("message", err.replace(/^message:\s*/i, ""));
-          }
-        });
-        showStatus(data.message || "Please fix the errors above.", "error");
       } else {
         showStatus(
-          data.message ||
-            "Unable to send your message. Please try again later.",
+          "Unable to send your message. Please try again later or email me directly.",
           "error"
         );
       }
     } catch (err) {
       showStatus(
-        "Network error. Please check your connection and try again.",
+        "Network error. On local preview, forms work after deploy to Netlify. You can also email me directly.",
         "error"
       );
     } finally {

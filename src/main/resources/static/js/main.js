@@ -68,8 +68,17 @@
     });
   }
 
-  window.addEventListener("scroll", setActiveNav, { passive: true });
-  setActiveNav();
+  const siteHeader = document.querySelector(".site-header");
+
+  function onScroll() {
+    setActiveNav();
+    if (siteHeader) {
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
   // Smooth scroll for anchor links (enhancement)
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {

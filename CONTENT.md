@@ -6,7 +6,7 @@ Replace placeholder values in `src/main/resources/static/index.html` and swap im
 
 - [ ] **Hero** — Name, role, tagline, profile photo
 - [ ] **Social links** — GitHub, LinkedIn URLs
-- [ ] **Email** — Replace `abid.hasan@example.com`
+- [ ] **Email** — Confirm contact email is correct
 - [ ] **About** — Your personal story
 - [ ] **Education** — University, college, and high school names, dates, bullets
 - [ ] **Achievements** — Real awards and years
@@ -30,6 +30,6 @@ Replace placeholder values in `src/main/resources/static/index.html` and swap im
 
 Keep the same filenames when replacing images so you do not need to edit HTML.
 
-## Backend configuration
+## Contact form
 
-See `README.md` for Firebase and SMTP setup.
+After deploying to Netlify, enable form notifications under **Site configuration → Forms**. See `README.md` for deploy steps.

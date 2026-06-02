@@ -46,11 +46,11 @@
 }
 
 .gradient-orb--1 {
-  width: 420px;
-  height: 420px;
-  background: rgba(44, 82, 130, 0.2);
-  top: 10%;
-  left: -5%;
+  width: 480px;
+  height: 480px;
+  background: rgba(44, 82, 130, 0.24);
+  top: 5%;
+  left: -8%;
   animation-delay: 0s;
 }
 

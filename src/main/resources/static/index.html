@@ -11,9 +11,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/gradients.css">
-  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/gradients.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/futuristic.css">
 </head>
 
 <body>
@@ -44,7 +45,7 @@
         <li><a class="nav__link" href="#projects">Projects</a></li>
         <li><a class="nav__link" href="#testimonials">Reviews</a></li>
         <li><a class="nav__link" href="#contact">Contact</a></li>
-        <li><a class="nav__link nav__link--cta" href="/assets/resume.pdf" target="_blank"
+        <li><a class="nav__link nav__link--cta" href="./assets/resume.pdf" target="_blank"
             rel="noopener noreferrer">Resume</a></li>
       </ul>
     </nav>
@@ -53,20 +54,25 @@
   <main id="main">
     <section class="hero section" id="hero">
       <div class="container">
-        <div class="hero__card reveal">
+        <div class="hero__card">
           <div class="hero__grid">
             <div class="hero__content">
-              <p class="hero__eyebrow">Portfolio</p>
-              <h1 class="hero__title">Abid Hasan</h1>
-              <p class="hero__role">Computer Science Student & Aspiring AI/ML Engineer</p>
+              <p class="hero__eyebrow">
+                <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+                Open to AI/ML Internships
+              </p>
+              <h1 class="hero__title">
+                <span class="hero__title-text">Abid Hasan</span>
+              </h1>
+              <p class="hero__role" data-role-text="Computer Science Student &amp; Aspiring AI/ML Engineer">Computer Science Student &amp; Aspiring AI/ML Engineer</p>
               <p class="hero__tagline">
                 Building intelligent systems with a focus on Deep Learning and clean software engineering. Passionate
                 about solving complex problems and continuous learning in the AI space.
               </p>
               <div class="hero__actions">
-                <a class="btn btn--primary" href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">View
+                <a class="btn btn--primary" href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer">View
                   Resume</a>
-                <a class="btn btn--secondary" href="/assets/resume.pdf" download="Abid-Hasan-Resume.pdf">Download
+                <a class="btn btn--secondary" href="./assets/resume.pdf" download="Abid-Hasan-Resume.pdf">Download
                   PDF</a>
                 <a class="btn btn--outline" href="#contact">Contact Me</a>
               </div>
@@ -78,7 +84,7 @@
                       d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.166 6.839 9.492.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z" />
                   </svg>
                 </a>
-                <a href="www.linkedin.com/in/abidhasan720" class="social-link" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/abidhasan720" class="social-link" target="_blank" rel="noopener noreferrer"
                   aria-label="LinkedIn profile">
                   <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
                     <path fill="currentColor"
@@ -94,11 +100,16 @@
               </div>
             </div>
             <div class="hero__photo-wrap">
-              <img class="hero__photo" src="/assets/images/profile-placeholder.jpg"
+              <div class="hero__photo-ring" aria-hidden="true"></div>
+              <img class="hero__photo" src="./assets/images/profile-placeholder.jpg"
                 alt="Abid Hasan — profile photo placeholder" width="320" height="320" fetchpriority="high">
             </div>
           </div>
         </div>
+        <a class="hero__scroll-hint" href="#about" aria-label="Scroll to About section">
+          <span class="hero__scroll-text">Explore</span>
+          <span class="hero__scroll-icon" aria-hidden="true"></span>
+        </a>
       </div>
     </section>
 
@@ -190,48 +201,36 @@
           <p class="section__subtitle">Milestones and recognition</p>
         </header>
         <div class="achievements-grid">
-          <article class="achievement-card reveal">
+          <article class="achievement-card reveal reveal-delay-1">
             <div class="achievement-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="28" height="28">
                 <path fill="currentColor" d="M12 2l2.4 7.4h7.6l-6 4.6 2.3 7-6.3-4.6L5.7 21l2.3-7-6-4.6h7.6z" />
               </svg>
             </div>
-            <h3 class="achievement-card__title">Dean&apos;s List</h3>
-            <p class="achievement-card__desc">Recognized for academic excellence for consecutive semesters.</p>
-            <span class="achievement-card__year">2024</span>
+            <h3 class="achievement-card__title">100% Tuition Fee Scholarship</h3>
+            <p class="achievement-card__desc">Awarded for academic excellence at Southeast University.</p>
+            <span class="achievement-card__year">2023</span>
           </article>
-          <article class="achievement-card reveal">
+          <article class="achievement-card reveal reveal-delay-2">
             <div class="achievement-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="28" height="28">
                 <path fill="currentColor" d="M4 6h16v2H4V6zm2 5h12v2H6v-2zm-2 5h16v2H4v-2z" />
               </svg>
             </div>
-            <h3 class="achievement-card__title">Hackathon Participant</h3>
-            <p class="achievement-card__desc">Competed in university hackathon; built a working prototype in 24 hours.
-            </p>
-            <span class="achievement-card__year">2023</span>
+            <h3 class="achievement-card__title">PSC Talent-Pool Scholarship</h3>
+            <p class="achievement-card__desc">Achieved in the Dhaka Board PSC Examination.</p>
+            <span class="achievement-card__year">2015</span>
           </article>
-          <article class="achievement-card reveal">
+          <article class="achievement-card reveal reveal-delay-3">
             <div class="achievement-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="28" height="28">
                 <path fill="currentColor"
                   d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13.5L4 12v2.5l8 4.5 8-4.5V12l-8 4.5z" />
               </svg>
             </div>
-            <h3 class="achievement-card__title">Programming Competition</h3>
-            <p class="achievement-card__desc">Top 20% finish in inter-college coding contest.</p>
-            <span class="achievement-card__year">2022</span>
-          </article>
-          <article class="achievement-card reveal">
-            <div class="achievement-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28">
-                <path fill="currentColor"
-                  d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" />
-              </svg>
-            </div>
-            <h3 class="achievement-card__title">Leadership Award</h3>
-            <p class="achievement-card__desc">Led a peer study group for data structures and algorithms.</p>
-            <span class="achievement-card__year">2023</span>
+            <h3 class="achievement-card__title">Academic Excellence</h3>
+            <p class="achievement-card__desc">Maintaining a perfect 4.00 GPA in core CS modules including DSA and Java.</p>
+            <span class="achievement-card__year">2025</span>
           </article>
         </div>
       </div>
@@ -245,28 +244,34 @@
         </header>
         <div class="cert-grid">
           <article class="cert-card reveal">
+            <span class="cert-card__platform">Certification</span>
+            <h3 class="cert-card__title">AI+ Prompt Engineer Level 1™</h3>
+            <p class="cert-card__desc">Foundational prompt engineering and AI-assisted workflows.</p>
+            <span class="cert-card__date">2025</span>
+          </article>
+          <article class="cert-card reveal">
             <span class="cert-card__platform">Coursera</span>
-            <h3 class="cert-card__title">Java Programming and Software Engineering</h3>
-            <p class="cert-card__desc">Object-oriented programming, testing, and design fundamentals.</p>
+            <h3 class="cert-card__title">Data Science Math Skills - Duke University</h3>
+            <p class="cert-card__desc">Algebra, calculus, and statistics for data science.</p>
+            <span class="cert-card__date">2025</span>
+          </article>
+          <article class="cert-card reveal">
+            <span class="cert-card__platform">Online Course</span>
+            <h3 class="cert-card__title">Introduction to Web Development (HTML, CSS, JS)</h3>
+            <p class="cert-card__desc">Core front-end building blocks and responsive layouts.</p>
             <span class="cert-card__date">2024</span>
           </article>
           <article class="cert-card reveal">
-            <span class="cert-card__platform">Udemy</span>
-            <h3 class="cert-card__title">Spring Boot Microservices</h3>
-            <p class="cert-card__desc">REST APIs, dependency injection, and production-ready patterns.</p>
+            <span class="cert-card__platform">GitHub Skills</span>
+            <h3 class="cert-card__title">Getting Started with Git and GitHub</h3>
+            <p class="cert-card__desc">Version control, branching, and collaborative development.</p>
             <span class="cert-card__date">2024</span>
           </article>
           <article class="cert-card reveal">
-            <span class="cert-card__platform">freeCodeCamp</span>
-            <h3 class="cert-card__title">Responsive Web Design</h3>
-            <p class="cert-card__desc">HTML, CSS, Flexbox, Grid, and accessible layouts.</p>
-            <span class="cert-card__date">2023</span>
-          </article>
-          <article class="cert-card reveal">
-            <span class="cert-card__platform">Google Cloud Skills</span>
-            <h3 class="cert-card__title">Cloud Fundamentals</h3>
-            <p class="cert-card__desc">Core cloud concepts, storage, and deployment basics.</p>
-            <span class="cert-card__date">2023</span>
+            <span class="cert-card__platform">Microsoft</span>
+            <h3 class="cert-card__title">Introduction to Microsoft 365 Copilot</h3>
+            <p class="cert-card__desc">Productivity and AI-assisted workflows in Microsoft 365.</p>
+            <span class="cert-card__date">2025</span>
           </article>
         </div>
       </div>
@@ -282,29 +287,29 @@
           <div class="skills-group card-surface">
             <h3 class="skills-group__title">Languages</h3>
             <ul class="chip-list">
+              <li class="chip">C++</li>
               <li class="chip">Java</li>
-              <li class="chip">JavaScript</li>
-              <li class="chip">HTML</li>
-              <li class="chip">CSS</li>
+              <li class="chip">Python</li>
               <li class="chip">SQL</li>
             </ul>
           </div>
           <div class="skills-group card-surface">
             <h3 class="skills-group__title">Frameworks &amp; Tools</h3>
             <ul class="chip-list">
-              <li class="chip">Spring Boot</li>
-              <li class="chip">Maven</li>
-              <li class="chip">Git</li>
+              <li class="chip">JavaFX</li>
+              <li class="chip">Android Studio</li>
               <li class="chip">Firebase</li>
-              <li class="chip">REST APIs</li>
+              <li class="chip">Git</li>
+              <li class="chip">Maven</li>
             </ul>
           </div>
           <div class="skills-group card-surface">
             <h3 class="skills-group__title">Concepts</h3>
             <ul class="chip-list">
+              <li class="chip">Deep Learning (ANN, CNN, RNN)</li>
+              <li class="chip">Prompt Engineering</li>
               <li class="chip">OOP</li>
-              <li class="chip">Responsive Design</li>
-              <li class="chip">Version Control</li>
+              <li class="chip">Data Structures &amp; Algorithms</li>
               <li class="chip">Problem Solving</li>
             </ul>
           </div>
@@ -319,30 +324,29 @@
           <p class="section__subtitle">Selected work and experiments</p>
         </header>
         <div class="projects-grid">
-          <article class="project-card project-card--has-bg reveal"
-            style="--project-bg: url('/assets/images/projects/project-1.jpg')">
+          <article class="project-card project-card--has-bg reveal reveal-delay-1"
+            style="--project-bg: url('./assets/images/projects/project-1.jpg')">
             <div class="project-card__media" role="img" aria-label="Portfolio project preview"></div>
             <div class="project-card__body">
               <h3 class="project-card__title">Portfolio Website</h3>
               <p class="project-card__desc">
-                Responsive portfolio with Spring Boot backend, Firebase Firestore, and SMTP notifications.
+                Responsive static portfolio with futuristic animations, Netlify hosting, and contact forms.
               </p>
               <ul class="chip-list chip-list--sm">
                 <li class="chip">HTML</li>
                 <li class="chip">CSS</li>
                 <li class="chip">JavaScript</li>
-                <li class="chip">Spring Boot</li>
-                <li class="chip">Firebase</li>
+                <li class="chip">Netlify</li>
+                <li class="chip">CSS Animations</li>
               </ul>
               <div class="project-card__links">
-                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
                 <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Source Code</a>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-card--has-bg reveal"
-            style="--project-bg: url('/assets/images/projects/project-2.jpg')">
+          <article class="project-card project-card--has-bg reveal reveal-delay-2"
+            style="--project-bg: url('./assets/images/projects/project-2.jpg')">
             <div class="project-card__media" role="img" aria-label="Task Manager API preview"></div>
             <div class="project-card__body">
               <h3 class="project-card__title">Task Manager API</h3>
@@ -355,14 +359,13 @@
                 <li class="chip">REST</li>
               </ul>
               <div class="project-card__links">
-                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
                 <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Source Code</a>
               </div>
             </div>
           </article>
 
-          <article class="project-card project-card--has-bg reveal"
-            style="--project-bg: url('/assets/images/projects/project-3.jpg')">
+          <article class="project-card project-card--has-bg reveal reveal-delay-3"
+            style="--project-bg: url('./assets/images/projects/project-3.jpg')">
             <div class="project-card__media" role="img" aria-label="Weather Dashboard preview"></div>
             <div class="project-card__body">
               <h3 class="project-card__title">Weather Dashboard</h3>
@@ -375,7 +378,6 @@
                 <li class="chip">APIs</li>
               </ul>
               <div class="project-card__links">
-                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
                 <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Source Code</a>
               </div>
             </div>
@@ -392,7 +394,7 @@
         </header>
         <div class="testimonials-scroll">
           <article class="testimonial-card reveal">
-            <img class="testimonial-card__photo" src="/assets/images/testimonials/expert-1.jpg" alt="Dr. Jane Smith"
+            <img class="testimonial-card__photo" src="./assets/images/testimonials/expert-1.jpg" alt="Dr. Jane Smith"
               width="72" height="72" loading="lazy">
             <blockquote class="testimonial-card__quote">
               <p>&ldquo;Abid demonstrates strong analytical thinking and consistently delivers clean, well-documented
@@ -404,7 +406,7 @@
             </cite>
           </article>
           <article class="testimonial-card reveal">
-            <img class="testimonial-card__photo" src="/assets/images/testimonials/expert-2.jpg" alt="Michael Chen"
+            <img class="testimonial-card__photo" src="./assets/images/testimonials/expert-2.jpg" alt="Michael Chen"
               width="72" height="72" loading="lazy">
             <blockquote class="testimonial-card__quote">
               <p>&ldquo;A dedicated learner with excellent communication skills. Abid asks thoughtful questions and
@@ -416,7 +418,7 @@
             </cite>
           </article>
           <article class="testimonial-card reveal">
-            <img class="testimonial-card__photo" src="/assets/images/testimonials/expert-3.jpg"
+            <img class="testimonial-card__photo" src="./assets/images/testimonials/expert-3.jpg"
               alt="Prof. Sarah Williams" width="72" height="72" loading="lazy">
             <blockquote class="testimonial-card__quote">
               <p>&ldquo;Among my students, Abid stands out for initiative and reliability. His portfolio reflects both
@@ -445,10 +447,15 @@
             </p>
             <p class="contact-info__email">
               <strong>Email:</strong>
-              <a href="mailto:abid.hasan@example.com">abid.hasan@example.com</a>
+              <a href="mailto:abid.hasan.tng@gmail.com">abid.hasan.tng@gmail.com</a>
             </p>
           </div>
-          <form class="contact-form" id="contact-form" novalidate>
+          <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true"
+            netlify-honeypot="bot-field" novalidate>
+            <input type="hidden" name="form-name" value="contact">
+            <p class="visually-hidden" hidden>
+              <label>Don&apos;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" autocomplete="name" required maxlength="100"
@@ -483,15 +490,24 @@
       <p>&copy; <span id="year"></span> Abid Hasan. All rights reserved.</p>
       <div class="site-footer__links">
         <a href="#hero" class="footer-link">Back to top</a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
-        <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+        <a href="https://github.com/hasan2733" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/abidhasan720" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
-  <script src="/js/animations.js"></script>
-  <script src="/js/contact.js"></script>
+  <!-- Netlify build-time form detection (AJAX submit uses #contact-form above) -->
+  <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact">
+    <input name="name" type="text">
+    <input name="email" type="email">
+    <textarea name="message"></textarea>
+  </form>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/animations.js"></script>
+  <script src="./js/particles.js"></script>
+  <script src="./js/contact.js"></script>
 </body>
 
 </html>

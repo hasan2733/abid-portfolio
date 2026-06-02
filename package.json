@@ -1,0 +1,9 @@
+{
+  "name": "abid-portfolio",
+  "private": true,
+  "description": "Static personal portfolio",
+  "scripts": {
+    "start": "python3 -m http.server 8080 --directory src/main/resources/static",
+    "preview": "npm run start"
+  }
+}
