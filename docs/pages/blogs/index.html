@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My latest blog posts and thoughts on web development, coding, and technology.">
+  <title>Blog - Abid Hasan's Portfolio</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/gradients.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/futuristic.css">
+  <link rel="stylesheet" href="../../css/blog.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container navbar__container">
+      <a href="../../" class="navbar__logo">
+        <span class="navbar__logo-text">Abid <strong>Hasan</strong></span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav__menu">
+        <li><a href="../../#hero" class="nav__link">Home</a></li>
+        <li><a href="../../#about" class="nav__link">About</a></li>
+        <li><a href="../../#skills" class="nav__link">Skills</a></li>
+        <li><a href="../../#projects" class="nav__link">Projects</a></li>
+        <li><a href="./index.html" class="nav__link active">Blog</a></li>
+        <li><a href="../../#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero blog-hero bg-gradient" id="blog-hero">
+    <canvas id="hero-particles" class="hero-particles"></canvas>
+    <div class="container">
+      <div class="hero__card">
+        <h1 class="hero__title">Blog</h1>
+        <p class="hero__subtitle">Thoughts, insights, and learnings from my journey as a developer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Section -->
+  <section class="section" id="blog-posts">
+    <div class="container">
+      <h2 class="section__title">Latest Articles</h2>
+      <div class="blog-grid">
+        <!-- Blog Card Example 1 -->
+        <article class="blog-card">
+          <div class="blog-card__header">
+            <h3 class="blog-card__title">Getting Started with GitHub Pages</h3>
+            <span class="blog-card__date">Nov 15, 2024</span>
+          </div>
+          <p class="blog-card__excerpt">Learn how to create a free portfolio website using GitHub Pages and host your projects online with a custom domain.</p>
+          <div class="blog-card__tags">
+            <span class="blog-tag">GitHub</span>
+            <span class="blog-tag">Web Development</span>
+            <span class="blog-tag">Tutorial</span>
+          </div>
+          <a href="./post-github-pages.html" class="blog-card__link">Read More →</a>
+        </article>
+
+        <!-- Blog Card Example 2 -->
+        <article class="blog-card">
+          <div class="blog-card__header">
+            <h3 class="blog-card__title">CSS Animations: Making Web Pages Alive</h3>
+            <span class="blog-card__date">Nov 8, 2024</span>
+          </div>
+          <p class="blog-card__excerpt">Explore how to create stunning CSS animations without JavaScript. Perfect for adding visual appeal to your portfolio.</p>
+          <div class="blog-card__tags">
+            <span class="blog-tag">CSS</span>
+            <span class="blog-tag">Animation</span>
+            <span class="blog-tag">Design</span>
+          </div>
+          <a href="./post-css-animations.html" class="blog-card__link">Read More →</a>
+        </article>
+
+        <!-- Blog Card Example 3 -->
+        <article class="blog-card">
+          <div class="blog-card__header">
+            <h3 class="blog-card__title">Responsive Web Design Best Practices</h3>
+            <span class="blog-card__date">Oct 30, 2024</span>
+          </div>
+          <p class="blog-card__excerpt">Master responsive design techniques to ensure your website looks great on all devices and screen sizes.</p>
+          <div class="blog-card__tags">
+            <span class="blog-tag">Responsive</span>
+            <span class="blog-tag">CSS</span>
+            <span class="blog-tag">Mobile</span>
+          </div>
+          <a href="./post-responsive-design.html" class="blog-card__link">Read More →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__content">
+        <p>&copy; <span id="year"></span> Abid Hasan. All rights reserved.</p>
+        <div class="footer__socials">
+          <a href="https://github.com/hasan2733" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+          <a href="https://twitter.com/abidhasan_dev" target="_blank" rel="noopener noreferrer" class="footer-link">Twitter</a>
+          <a href="https://www.linkedin.com/in/abidhasan720" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/animations.js"></script>
+  <script src="../../js/particles.js"></script>
+</body>
+
+</html>
