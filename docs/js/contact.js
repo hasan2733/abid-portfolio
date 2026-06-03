@@ -97,48 +97,15 @@
     return params.toString();
   }
 
-  form.addEventListener("submit", async function (e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-
+  
     if (!validateClient()) return;
-
-    const payload = {
-      "form-name": "contact",
-      name: fields.name.input.value.trim(),
-      email: fields.email.input.value.trim(),
-      message: fields.message.input.value.trim(),
-    };
-
+  
     setLoading(true);
-    clearErrors();
-
-    try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encodeFormBody(payload),
-      });
-
-      if (response.ok) {
-        showStatus(
-          "Thank you! Your message has been sent successfully.",
-          "success"
-        );
-        form.reset();
-      } else {
-        showStatus(
-          "Unable to send your message. Please try again later or email me directly.",
-          "error"
-        );
-      }
-    } catch (err) {
-      showStatus(
-        "Network error. On local preview, forms work after deploy to Netlify. You can also email me directly.",
-        "error"
-      );
-    } finally {
-      setLoading(false);
-    }
+  
+    form.submit(); 
+  
   });
 
   Object.values(fields).forEach(function (field) {
