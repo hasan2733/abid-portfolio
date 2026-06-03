@@ -43,6 +43,7 @@
         <li><a class="nav__link" href="#certifications">Certs</a></li>
         <li><a class="nav__link" href="#skills">Skills</a></li>
         <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="./pages/blogs/index.html">Blog</a></li>
         <li><a class="nav__link" href="#testimonials">Reviews</a></li>
         <li><a class="nav__link" href="#contact">Contact</a></li>
         <li><a class="nav__link nav__link--cta" href="./assets/resume.pdf" target="_blank"
@@ -450,12 +451,9 @@
               <a href="mailto:abid.hasan.tng@gmail.com">abid.hasan.tng@gmail.com</a>
             </p>
           </div>
-          <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true"
-            netlify-honeypot="bot-field" novalidate>
-            <input type="hidden" name="form-name" value="contact">
-            <p class="visually-hidden" hidden>
-              <label>Don&apos;t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
-            </p>
+          <form class="contact-form" id="contact-form" name="contact" method="POST" action="https://formsubmit.co/abidhasan2733@gmail.com" novalidate>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://abidhasan27.me/#contact">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" autocomplete="name" required maxlength="100"
@@ -495,14 +493,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Netlify build-time form detection (AJAX submit uses #contact-form above) -->
-  <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-    <input type="hidden" name="form-name" value="contact">
-    <input name="name" type="text">
-    <input name="email" type="email">
-    <textarea name="message"></textarea>
-  </form>
 
   <script src="./js/main.js"></script>
   <script src="./js/animations.js"></script>
