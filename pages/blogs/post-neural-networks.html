@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn the fundamentals of neural networks, how they work, and real-world applications in AI.">
+  <title>Understanding Neural Networks: A Beginner's Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/gradients.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+  <link rel="stylesheet" href="../../css/futuristic.css">
+  <link rel="stylesheet" href="../../css/blog.css">
+  <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
+</head>
+
+<body>
+  <div class="bg-gradient" aria-hidden="true">
+    <div class="bg-gradient__layer"></div>
+    <div class="bg-gradient__layer bg-gradient__layer--secondary"></div>
+    <div class="gradient-orb gradient-orb--1"></div>
+    <div class="gradient-orb gradient-orb--2"></div>
+    <div class="gradient-orb gradient-orb--3"></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+<a class="nav__logo" href="../../">Abid Hasan</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link" href="../../#hero">Home</a></li>
+        <li><a class="nav__link" href="../../#about">About</a></li>
+        <li><a class="nav__link" href="../../#skills">Skills</a></li>
+        <li><a class="nav__link" href="../../#projects">Projects</a></li>
+        <li><a class="nav__link is-active" href="./index.html">Blog</a></li>
+        <li><a class="nav__link" href="../../#contact">Contact</a></li>
+        <li><a class="nav__link nav__link--cta" href="../../assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="section blog-post-page">
+    <article class="blog-post reveal">
+      <div class="blog-post__header">
+        <h1 class="blog-post__title">Understanding Neural Networks: A Beginner's Guide</h1>
+        <div class="blog-post__meta">
+          <span class="blog-post__meta-item"><strong>Published:</strong> July 3, 2026</span>
+          <span class="blog-post__meta-item"><strong>Read time:</strong> 7 min</span>
+          <span class="blog-post__meta-item"><strong>Author:</strong> Abid Hasan</span>
+        </div>
+      </div>
+
+      <div class="blog-post__content">
+        <figure class="blog-post__image">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Abstract neural network visualization" loading="lazy">
+          <figcaption>Image source: <a href="https://unsplash.com/photos/3Mhgvrk4tjM" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption>
+        </figure>
+
+        <p>Neural networks power modern artificial intelligence by simulating how the human brain processes information. They learn from examples, detect patterns, and make predictions for tasks such as image recognition, speech understanding, and recommendation systems.</p>
+
+        <h2>What Is a Neural Network?</h2>
+        <p>A neural network is a computing system made of layers of nodes called neurons. Each neuron receives input, applies a weight, passes the result through an activation function, and sends the output onward. By adjusting these weights during training, the network learns to approximate complex functions.</p>
+
+        <h2>Core Components</h2>
+        <ul>
+          <li><strong>Input layer:</strong> Receives raw data such as pixels, text, or numerical features.</li>
+          <li><strong>Hidden layers:</strong> Transform the inputs and learn nonlinear relationships.</li>
+          <li><strong>Output layer:</strong> Produces the final prediction, classification, or score.</li>
+        </ul>
+
+        <h2>How Neural Networks Learn</h2>
+        <p>Neural networks learn through backpropagation. During training, the model predicts outputs for examples, calculates the error against the true values, and adjusts weights to reduce that error. Repeating this process across many examples helps the network generalize to unseen data.</p>
+
+        <h3>Training Workflow</h3>
+        <ol>
+          <li>Collect and preprocess data.</li>
+          <li>Design the network architecture.</li>
+          <li>Train on labeled examples.</li>
+          <li>Evaluate performance on validation data.</li>
+          <li>Fine-tune hyperparameters and retrain as needed.</li>
+        </ol>
+
+        <h2>Common Architectures</h2>
+        <ul>
+          <li><strong>Feedforward networks:</strong> Used for basic classification and regression.</li>
+          <li><strong>Convolutional Neural Networks (CNNs):</strong> Great for image and video analysis.</li>
+          <li><strong>Recurrent Neural Networks (RNNs):</strong> Designed for sequential data like text and audio.</li>
+          <li><strong>Transformers:</strong> Powerful models for natural language and generative AI.</li>
+        </ul>
+
+        <h2>Real-World Applications</h2>
+        <ul>
+          <li>Image classification in healthcare, security, and self-driving cars.</li>
+          <li>Speech recognition for virtual assistants and transcription services.</li>
+          <li>Recommendation engines for streaming services and online shopping.</li>
+          <li>Text generation in chatbots, writing assistants, and translation tools.</li>
+        </ul>
+
+        <h2>Why Neural Networks Matter</h2>
+        <p>Neural networks can model highly nonlinear relationships and adapt to large datasets. This makes them essential for solving problems that traditional algorithms struggle with and for building AI systems that improve with experience.</p>
+
+        <h2>Beginner Tips</h2>
+        <ul>
+          <li>Start with small datasets and simple models.</li>
+          <li>Use frameworks like TensorFlow, PyTorch, or Keras.</li>
+          <li>Monitor training with loss and accuracy curves.</li>
+          <li>Experiment with activation functions, learning rates, and layer depths.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Neural networks are a cornerstone of modern AI. With a strong foundation in their structure, training, and applications, beginners can start building models and exploring the possibilities of machine learning.</p>
+      </div>
+
+      <div class="blog-post__footer">
+        <a href="./blogs/index.html" class="blog-post__nav-link">&larr; Back to Blog</a>
+        <a href="./blogs/post-responsive-design.html" class="blog-post__nav-link">Next Post &rarr;</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year"></span> Abid Hasan. All rights reserved.</p>
+      <div class="site-footer__links">
+        <a href="../../#hero" class="footer-link">Back to top</a>
+        <a href="https://github.com/hasan2733" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/abidhasan720" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/animations.js"></script>
+  <script src="../../js/particles.js"></script>
+</body>
+
+</html>
