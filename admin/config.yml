@@ -1,0 +1,126 @@
+backend:
+  name: github
+  repo: hasan2733/abid-portfolio
+  branch: main
+  base_url: "https://decap-proxy.abidhasan27.workers.dev"
+  auth_endpoint: "/auth"
+  commit_messages:
+    create: "Add {{collection}} \"{{slug}}\""
+    update: "Update {{collection}} \"{{slug}}\""
+    delete: "Delete {{collection}} \"{{slug}}\""
+    uploadMedia: "Add media \"{{path}}\""
+    deleteMedia: "Delete media \"{{path}}\""
+
+media_folder: assets/images/uploads
+public_folder: /assets/images/uploads
+
+site_url: https://abidhasan27.me
+
+# Global settings collection
+collections:
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - name: "settings"
+        label: "General Settings"
+        file: "content/site.yml"
+        fields:
+          # Hero Section
+          - {label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", default: "Open to AI/ML Internships"}
+          - {label: "Hero Title", name: "hero_title", widget: "string", default: "Abid Hasan"}
+          - {label: "Hero Role", name: "hero_role", widget: "string", default: "Computer Science Student & Aspiring AI/ML Engineer"}
+          - {label: "Hero Tagline", name: "hero_tagline", widget: "text", default: "Building intelligent systems with a focus on Deep Learning and clean software engineering. Passionate about solving complex problems and continuous learning in the AI space."}
+          - {label: "Profile Image", name: "profile_image", widget: "image", required: false, media_library: {config: {multiple: false}}}
+          
+          # About Section
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Paragraph 1", name: "p1", widget: "markdown", default: "I am a third-year Computer Science and Engineering undergraduate at Southeast University and a 100% merit-based scholarship recipient. I have developed a strong foundation in C++, Data Structures, and Algorithms, which fuels my passion for software engineering and technical problem-solving."}
+              - {label: "Paragraph 2", name: "p2", widget: "markdown", default: "My experience includes building versatile applications, such as a Movie Ticket Management System using JavaFX and a BMI & BMR Calculator for Android integrated with Firebase. I am proficient in Java, Python, and SQL, and I enjoy creating well-structured software that bridge the gap between complex backend logic and user-friendly interfaces."}
+              - {label: "Paragraph 3", name: "p3", widget: "markdown", default: "Currently, I am specializing in Artificial Intelligence and Deep Learning, with hands-on experience in neural network architectures like ANN, CNN, and RNN. My goal is to contribute to AI research and build intelligent systems that solve real-world challenges through continuous learning and collaboration. My main goal is to secure a internship in the field of AI/ML."}
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            fields:
+              - {label: "Badge", name: "badge", widget: "string"}
+              - {label: "Degree", name: "degree", widget: "string"}
+              - {label: "Dates", name: "dates", widget: "string"}
+              - {label: "School", name: "school", widget: "string"}
+              - {label: "Details", name: "details", widget: "list", field: {label: "Detail", name: "detail", widget: "string"}}
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - {label: "Category", name: "category", widget: "string"}
+              - {label: "Items (comma-separated)", name: "items", widget: "string"}
+          - label: "Certifications"
+            name: "certifications"
+            widget: "list"
+            fields:
+              - {label: "Platform", name: "platform", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Date", name: "date", widget: "string"}
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - {label: "Quote", name: "quote", widget: "text"}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Description", name: "description", widget: "markdown"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Form Endpoint", name: "form_endpoint", widget: "string"}
+              - {label: "Redirect URL", name: "redirect_url", widget: "string"}
+
+  # Projects Collection
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sort: "date:desc"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Tech Stack (comma-separated)", name: "tech", widget: "string", default: "HTML, CSS, JavaScript"}
+      - {label: "GitHub URL", name: "github_url", widget: "string", required: false, pattern: ["^https?://.*$", "Must be a valid URL starting with http:// or https://"]}
+      - {label: "Demo URL", name: "demo_url", widget: "string", required: false, pattern: ["^https?://.*$", "Must be a valid URL starting with http:// or https://"]}
+      - {label: "Video URL", name: "video_url", widget: "string", required: false, pattern: ["^https?://.*$", "Must be a valid URL starting with http:// or https://"]}
+      - {label: "Image", name: "image", widget: "image", required: false, media_library: {config: {multiple: false}}}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: "Display Order", name: "order", widget: "number", default: 0, value_type: "int", min: 0, max: 100}
+
+  # Blog Posts Collection
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sort: "date:desc"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false}
+      - {label: "Badge/Category", name: "badge", widget: "string", default: "Article"}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Tags (comma-separated)", name: "tags", widget: "string", default: "AI, Machine Learning"}
+      - {label: "Cover Image", name: "cover", widget: "image", required: false, media_library: {config: {multiple: false}}}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # Resume
+  - name: "resume"
+    label: "Resume"
+    files:
+      - name: "resume"
+        label: "Resume Settings"
+        file: "content/resume.yml"
+        fields:
+          - {label: "Resume Filename", name: "filename", widget: "string", default: "resume.pdf"}
+          - {label: "Display Text", name: "display_text", widget: "string", default: "View Resume"}
+          - {label: "Download Filename", name: "download_filename", widget: "string", default: "Abid-Hasan-Resume.pdf"}

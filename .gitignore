@@ -10,3 +10,6 @@ Thumbs.db
 
 # Local Netlify
 .netlify/
+
+# Dependencies
+node_modules/

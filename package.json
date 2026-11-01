@@ -3,7 +3,24 @@
   "private": true,
   "description": "Static personal portfolio",
   "scripts": {
+    "build": "node build.js",
     "start": "python3 -m http.server 8080",
     "preview": "npm run start"
+  },
+  "version": "1.0.0",
+  "main": "build.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasan2733/abid-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hasan2733/abid-portfolio/issues"
+  },
+  "homepage": "https://github.com/hasan2733/abid-portfolio#readme",
+  "dependencies": {
+    "js-yaml": "^5.5.0"
   }
 }
