@@ -91,7 +91,7 @@
       function (entries) {
         entries.forEach(function (entry) {
           if (!entry.isIntersecting) return;
-          entry.target.querySelectorAll(".chip").forEach(function (chip, idx) {
+          entry.target.querySelectorAll(".skill-chip").forEach(function (chip, idx) {
             setTimeout(function () {
               chip.classList.add("is-pulsed");
             }, idx * 60);
