@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const { marked } = require('marked');
 
 const BASE_DIR = __dirname;
 
@@ -67,6 +68,14 @@ function htmlEscape(str) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
+}
+
+function renderMarkdown(body) {
+  return marked.parse(body, {
+    gfm: true,
+    breaks: false,
+    html: false
+  });
 }
 
 function replaceDivContents(html, className, contents) {
@@ -405,6 +414,7 @@ blogPosts.forEach(post => {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${htmlEscape(post.title)} - Abid Hasan | Portfolio</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
@@ -457,8 +467,8 @@ blogPosts.forEach(post => {
             </div>
           </header>
           ${post.cover ? `<img src="${htmlEscape(post.cover)}" alt="${htmlEscape(post.title)} cover" class="blog-post__cover">` : ''}
-          <div class="blog-post__body">
-            ${post.body || '<p>Content will be added via CMS.</p>'}
+          <div class="blog-post__content">
+            ${post.body ? renderMarkdown(post.body) : '<p>Content will be added via CMS.</p>'}
           </div>
           <footer class="blog-post__footer">
             <div class="blog-post__tags">

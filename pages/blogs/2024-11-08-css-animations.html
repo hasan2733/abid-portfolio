@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Animations: Making Web Pages Alive - Abid Hasan | Portfolio</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
@@ -56,22 +57,17 @@
             </div>
           </header>
           
-          <div class="blog-post__body">
-            # CSS Animations: Making Web Pages Alive
-
-Explore how to create stunning CSS animations without JavaScript. Perfect for adding visual appeal to your portfolio. CSS animations have evolved significantly, offering powerful capabilities that were once only possible with JavaScript.
-
-## Understanding CSS Animations
-
-CSS animations allow you to animate transitions between CSS property values. They consist of two main parts:
-
-1. **Keyframes** - Define the stages of the animation
-2. **Animation properties** - Control how the keyframes are applied
-
-## Basic Animation Syntax
-
-```css
-@keyframes fadeIn {
+          <div class="blog-post__content">
+            <h1>CSS Animations: Making Web Pages Alive</h1>
+<p>Explore how to create stunning CSS animations without JavaScript. Perfect for adding visual appeal to your portfolio. CSS animations have evolved significantly, offering powerful capabilities that were once only possible with JavaScript.</p>
+<h2>Understanding CSS Animations</h2>
+<p>CSS animations allow you to animate transitions between CSS property values. They consist of two main parts:</p>
+<ol>
+<li><strong>Keyframes</strong> - Define the stages of the animation</li>
+<li><strong>Animation properties</strong> - Control how the keyframes are applied</li>
+</ol>
+<h2>Basic Animation Syntax</h2>
+<pre><code class="language-css">@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -85,33 +81,55 @@ CSS animations allow you to animate transitions between CSS property values. The
 .element {
   animation: fadeIn 0.6s ease-out forwards;
 }
-```
-
-## Key Animation Properties
-
-| Property | Description |
-|----------|-------------|
-| `animation-name` | Name of the keyframes |
-| `animation-duration` | How long the animation takes |
-| `animation-timing-function` | Easing function (ease, linear, ease-in-out, etc.) |
-| `animation-delay` | Delay before animation starts |
-| `animation-iteration-count` | Number of times to repeat (infinite for loops) |
-| `animation-direction` | Direction (normal, reverse, alternate) |
-| `animation-fill-mode` | How styles are applied before/after (forwards, backwards, both) |
-| `animation-play-state` | running or paused |
-
-## Shorthand Syntax
-
-```css
-/* shorthand: name duration timing-function delay iteration-count direction fill-mode play-state */
+</code></pre>
+<h2>Key Animation Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>animation-name</code></td>
+<td>Name of the keyframes</td>
+</tr>
+<tr>
+<td><code>animation-duration</code></td>
+<td>How long the animation takes</td>
+</tr>
+<tr>
+<td><code>animation-timing-function</code></td>
+<td>Easing function (ease, linear, ease-in-out, etc.)</td>
+</tr>
+<tr>
+<td><code>animation-delay</code></td>
+<td>Delay before animation starts</td>
+</tr>
+<tr>
+<td><code>animation-iteration-count</code></td>
+<td>Number of times to repeat (infinite for loops)</td>
+</tr>
+<tr>
+<td><code>animation-direction</code></td>
+<td>Direction (normal, reverse, alternate)</td>
+</tr>
+<tr>
+<td><code>animation-fill-mode</code></td>
+<td>How styles are applied before/after (forwards, backwards, both)</td>
+</tr>
+<tr>
+<td><code>animation-play-state</code></td>
+<td>running or paused</td>
+</tr>
+</tbody></table>
+<h2>Shorthand Syntax</h2>
+<pre><code class="language-css">/* shorthand: name duration timing-function delay iteration-count direction fill-mode play-state */
 animation: fadeIn 0.6s ease-out 0.2s 1 forwards;
-```
-
-## Practical Examples
-
-### 1. Hover Effects
-```css
-.card {
+</code></pre>
+<h2>Practical Examples</h2>
+<h3>1. Hover Effects</h3>
+<pre><code class="language-css">.card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -119,11 +137,9 @@ animation: fadeIn 0.6s ease-out 0.2s 1 forwards;
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
-```
-
-### 2. Loading Spinner
-```css
-@keyframes spin {
+</code></pre>
+<h3>2. Loading Spinner</h3>
+<pre><code class="language-css">@keyframes spin {
   to { transform: rotate(360deg); }
 }
 
@@ -135,25 +151,20 @@ animation: fadeIn 0.6s ease-out 0.2s 1 forwards;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
-```
-
-### 3. Scroll-triggered Animations
-Using Intersection Observer API to trigger animations on scroll:
-
-```javascript
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+</code></pre>
+<h3>3. Scroll-triggered Animations</h3>
+<p>Using Intersection Observer API to trigger animations on scroll:</p>
+<pre><code class="language-javascript">const observer = new IntersectionObserver((entries) =&gt; {
+  entries.forEach(entry =&gt; {
     if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
+      entry.target.classList.add(&#39;animate&#39;);
     }
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-```
-
-```css
-.reveal {
+document.querySelectorAll(&#39;.reveal&#39;).forEach(el =&gt; observer.observe(el));
+</code></pre>
+<pre><code class="language-css">.reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -163,17 +174,15 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   opacity: 1;
   transform: translateY(0);
 }
-```
-
-## Performance Tips
-
-1. **Animate transform and opacity** - These properties are GPU-accelerated
-2. **Avoid animating layout properties** - width, height, margin, padding trigger reflow
-3. **Use `will-change`** - Hint to browser about upcoming animations
-4. **Reduce motion** - Respect `prefers-reduced-motion` media query
-
-```css
-@media (prefers-reduced-motion: reduce) {
+</code></pre>
+<h2>Performance Tips</h2>
+<ol>
+<li><strong>Animate transform and opacity</strong> - These properties are GPU-accelerated</li>
+<li><strong>Avoid animating layout properties</strong> - width, height, margin, padding trigger reflow</li>
+<li><strong>Use <code>will-change</code></strong> - Hint to browser about upcoming animations</li>
+<li><strong>Reduce motion</strong> - Respect <code>prefers-reduced-motion</code> media query</li>
+</ol>
+<pre><code class="language-css">@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -182,14 +191,10 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     transition-duration: 0.01ms !important;
   }
 }
-```
-
-## Advanced: Keyframe Choreography
-
-Create complex animations by orchestrating multiple elements:
-
-```css
-@keyframes slideUp {
+</code></pre>
+<h2>Advanced: Keyframe Choreography</h2>
+<p>Create complex animations by orchestrating multiple elements:</p>
+<pre><code class="language-css">@keyframes slideUp {
   0% { opacity: 0; transform: translateY(40px); }
   100% { opacity: 1; transform: translateY(0); }
 }
@@ -197,13 +202,10 @@ Create complex animations by orchestrating multiple elements:
 .stagger-1 { animation: slideUp 0.6s ease-out forwards; }
 .stagger-2 { animation: slideUp 0.6s ease-out 0.1s forwards; }
 .stagger-3 { animation: slideUp 0.6s ease-out 0.2s forwards; }
-```
-
-## Conclusion
-
-CSS animations are a powerful tool for enhancing user experience and adding personality to your websites. With modern CSS, you can create sophisticated animations entirely in stylesheets without JavaScript. Remember to prioritize performance, respect user preferences for reduced motion, and use animations purposefully to guide attention and provide feedback.
-
-*Building intelligent systems with a focus on Deep Learning and clean software engineering.*
+</code></pre>
+<h2>Conclusion</h2>
+<p>CSS animations are a powerful tool for enhancing user experience and adding personality to your websites. With modern CSS, you can create sophisticated animations entirely in stylesheets without JavaScript. Remember to prioritize performance, respect user preferences for reduced motion, and use animations purposefully to guide attention and provide feedback.</p>
+<p><em>Building intelligent systems with a focus on Deep Learning and clean software engineering.</em></p>
 
           </div>
           <footer class="blog-post__footer">
