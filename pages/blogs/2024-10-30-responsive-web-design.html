@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Web Design Best Practices - Abid Hasan | Portfolio</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
@@ -56,18 +57,13 @@
             </div>
           </header>
           
-          <div class="blog-post__body">
-            # Responsive Web Design Best Practices
-
-Master responsive design techniques to ensure your website looks great on all devices and screen sizes. In this post, we'll explore the fundamental principles and advanced strategies for creating websites that adapt seamlessly to any screen size.
-
-## Key Principles of Responsive Design
-
-### 1. Fluid Grid Systems
-Instead of fixed-width layouts, use relative units like percentages, `em`, `rem`, or `ch`. This allows elements to resize proportionally based on the viewport width.
-
-```css
-.container {
+          <div class="blog-post__content">
+            <h1>Responsive Web Design Best Practices</h1>
+<p>Master responsive design techniques to ensure your website looks great on all devices and screen sizes. In this post, we&#39;ll explore the fundamental principles and advanced strategies for creating websites that adapt seamlessly to any screen size.</p>
+<h2>Key Principles of Responsive Design</h2>
+<h3>1. Fluid Grid Systems</h3>
+<p>Instead of fixed-width layouts, use relative units like percentages, <code>em</code>, <code>rem</code>, or <code>ch</code>. This allows elements to resize proportionally based on the viewport width.</p>
+<pre><code class="language-css">.container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -79,23 +75,17 @@ Instead of fixed-width layouts, use relative units like percentages, `em`, `rem`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-```
-
-### 2. Flexible Images and Media
-Ensure images and videos scale with the viewport to prevent overflow and maintain visual consistency.
-
-```css
-img, video, canvas {
+</code></pre>
+<h3>2. Flexible Images and Media</h3>
+<p>Ensure images and videos scale with the viewport to prevent overflow and maintain visual consistency.</p>
+<pre><code class="language-css">img, video, canvas {
   max-width: 100%;
   height: auto;
 }
-```
-
-### 3. Media Queries
-Use media queries to apply different styles at specific breakpoints, tailoring the layout for different devices.
-
-```css
-@media (max-width: 768px) {
+</code></pre>
+<h3>3. Media Queries</h3>
+<p>Use media queries to apply different styles at specific breakpoints, tailoring the layout for different devices.</p>
+<pre><code class="language-css">@media (max-width: 768px) {
   .nav__menu {
     flex-direction: column;
     align-items: flex-start;
@@ -105,46 +95,31 @@ Use media queries to apply different styles at specific breakpoints, tailoring t
     font-size: 2rem;
   }
 }
-```
-
-### 4. Viewport Meta Tag
-Always include the viewport meta tag in your HTML to ensure the page scales correctly on mobile devices.
-
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
-
-## Advanced Techniques
-
-### CSS Container Queries
-Container queries allow components to respond to the size of their parent container rather than the entire viewport, enabling more modular and reusable designs.
-
-```css
-@container (max-width: 400px) {
+</code></pre>
+<h3>4. Viewport Meta Tag</h3>
+<p>Always include the viewport meta tag in your HTML to ensure the page scales correctly on mobile devices.</p>
+<pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+</code></pre>
+<h2>Advanced Techniques</h2>
+<h3>CSS Container Queries</h3>
+<p>Container queries allow components to respond to the size of their parent container rather than the entire viewport, enabling more modular and reusable designs.</p>
+<pre><code class="language-css">@container (max-width: 400px) {
   .card__image {
     border-radius: 4px;
   }
 }
-```
-
-### Viewport Units
-Use `vh` and `vw` units for typography and layout that scales with the viewport height and width.
-
-```css
-h1 {
+</code></pre>
+<h3>Viewport Units</h3>
+<p>Use <code>vh</code> and <code>vw</code> units for typography and layout that scales with the viewport height and width.</p>
+<pre><code class="language-css">h1 {
   font-size: calc(1.5rem + 3vw);
 }
-```
-
-## Testing Responsiveness
-
-Use browser developer tools to test your design across different device sizes. Chrome Devozilla offers device mode simulations for iPhone, iPad, and Android devices. Additionally, services like [BrowserStack](https://www.browserstack.com/) can help test on real devices.
-
-## Conclusion
-
-Responsive design is not a one-time task but an ongoing process. By combining fluid grids, flexible media, and strategic media queries, you can create websites that provide an optimal viewing experience across a wide range of devices. Start with a mobile-first approach, progressively enhancing the layout for larger screens, and always test on real devices to ensure accessibility and usability.
-
-*This post was written as part of my journey as a Computer Science student specializing in Artificial Intelligence and Deep Learning.*
+</code></pre>
+<h2>Testing Responsiveness</h2>
+<p>Use browser developer tools to test your design across different device sizes. Chrome Devozilla offers device mode simulations for iPhone, iPad, and Android devices. Additionally, services like <a href="https://www.browserstack.com/">BrowserStack</a> can help test on real devices.</p>
+<h2>Conclusion</h2>
+<p>Responsive design is not a one-time task but an ongoing process. By combining fluid grids, flexible media, and strategic media queries, you can create websites that provide an optimal viewing experience across a wide range of devices. Start with a mobile-first approach, progressively enhancing the layout for larger screens, and always test on real devices to ensure accessibility and usability.</p>
+<p><em>This post was written as part of my journey as a Computer Science student specializing in Artificial Intelligence and Deep Learning.</em></p>
 
           </div>
           <footer class="blog-post__footer">

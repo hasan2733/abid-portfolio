@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Getting Started with GitHub Pages - Abid Hasan | Portfolio</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
@@ -56,80 +57,67 @@
             </div>
           </header>
           
-          <div class="blog-post__body">
-            # Getting Started with GitHub Pages
-
-Learn how to create a free portfolio website using GitHub Pages and host your projects online with a custom domain. GitHub Pages is a fantastic way to showcase your work, and it's completely free.
-
-## What is GitHub Pages?
-
-GitHub Pages is a static site hosting service from GitHub to hosts your websites directly from your GitHub repository. Just name, branch, and directory, and you're good to go!
-
-## Step-by-Step Setup
-
-### 1. Create Your Repository
-
-Create a new GitHub repository. For user or organization pages, the repository name should be your username (e.g., `hasan2733.github.io`). For project pages, you can name it anything.
-
-### 2. Fork a Template or Use Your Existing Project
-
-You can:
-- Start with a boilerplate like [HTML5 UP](https://html5up.net/) or [Bootstrap](https://getbootstrap.com/)
-- Use your existing local project
-- Fork this portfolio template
-
-### 3. Push Your Files
-
-Push your `index.html`, `css/`, `js/`, `assets/` to your repository.
-
-```bash
-git init
+          <div class="blog-post__content">
+            <h1>Getting Started with GitHub Pages</h1>
+<p>Learn how to create a free portfolio website using GitHub Pages and host your projects online with a custom domain. GitHub Pages is a fantastic way to showcase your work, and it&#39;s completely free.</p>
+<h2>What is GitHub Pages?</h2>
+<p>GitHub Pages is a static site hosting service from GitHub to hosts your websites directly from your GitHub repository. Just name, branch, and directory, and you&#39;re good to go!</p>
+<h2>Step-by-Step Setup</h2>
+<h3>1. Create Your Repository</h3>
+<p>Create a new GitHub repository. For user or organization pages, the repository name should be your username (e.g., <code>hasan2733.github.io</code>). For project pages, you can name it anything.</p>
+<h3>2. Fork a Template or Use Your Existing Project</h3>
+<p>You can:</p>
+<ul>
+<li>Start with a boilerplate like <a href="https://html5up.net/">HTML5 UP</a> or <a href="https://getbootstrap.com/">Bootstrap</a></li>
+<li>Use your existing local project</li>
+<li>Fork this portfolio template</li>
+</ul>
+<h3>3. Push Your Files</h3>
+<p>Push your <code>index.html</code>, <code>css/</code>, <code>js/</code>, <code>assets/</code> to your repository.</p>
+<pre><code class="language-bash">git init
 git add .
-git commit -m "Initial commit"
+git commit -m &quot;Initial commit&quot;
 git branch -M main
 git remote add origin https://github.com/hasan2733/abid-portfolio.git
 git push -u origin main
-```
+</code></pre>
+<h3>4. Enable GitHub Pages</h3>
+<ol>
+<li>Go to your repository settings</li>
+<li>Scroll down to &quot;Pages&quot; section</li>
+<li>Select source: <code>main</code> branch, <code>/ (root)</code></li>
+<li>Click save</li>
+</ol>
+<p>GitHub Pages takes a minute to deploy. Your site will be available at <code>https://username.github.io/repository-name</code>.</p>
+<h2>Custom Domain</h2>
+<p>To use a custom domain:</p>
+<ol>
+<li>Buy a domain from a registrar</li>
+<li>In repository settings → Pages, enter your custom domain</li>
+<li>Configure DNS records at your registrar:<ul>
+<li>For <code>CNAME</code>: Add <code>CNAME</code> record pointing to <code>username.github.io</code></li>
+<li>For <code>A</code> records: Use GitHub&#39;s recommended IPs for apex domains</li>
+</ul>
+</li>
+</ol>
+<h2>Jekyll and Build Tools</h2>
+<p>GitHub Pages supports Jekyll by default, which allows you to add Markdown posts and compile SCSS. If you want to stick with plain HTML/CSS/JS, just commit those files directly.</p>
+<h2>Tips for Success</h2>
+<ol>
+<li><strong>Keep it lightweight</strong> - GitHub Pages has bandwidth limits, optimize images</li>
+<li><strong>Use HTTPS</strong> - GitHub Pages provides free SSL certificates</li>
+<li><strong>Add a <code>.nojekyll</code> file</strong> - If you have files/folders starting with <code>_</code> that shouldn&#39;t be processed by Jekyll</li>
+<li><strong>Use GitHub Actions</strong> - For custom build processes or to automate deployments</li>
+</ol>
+<h2>Conclusion</h2>
+<p>GitHub Pages is an excellent choice for personal portfolios, project showcases, and small websites. It&#39;s reliable, free, and integrates seamlessly with GitHub&#39;s ecosystem. With a bit of setup, your work can be live on the internet in minutes.</p>
+<p><em>This is part of my ongoing learning journey in building robust, performant web experiences.</em></p>
+<p><strong>Further Reading:</strong></p>
+<ul>
+<li><a href="https://docs.github.com/en/pages">GitHub Pages Documentation</a></li>
+<li><a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site">Setting up a custom domain</a></li>
+</ul>
 
-### 4. Enable GitHub Pages
-
-1. Go to your repository settings
-2. Scroll down to "Pages" section
-3. Select source: `main` branch, `/ (root)`
-4. Click save
-
-GitHub Pages takes a minute to deploy. Your site will be available at `https://username.github.io/repository-name`.
-
-## Custom Domain
-
-To use a custom domain:
-
-1. Buy a domain from a registrar
-2. In repository settings → Pages, enter your custom domain
-3. Configure DNS records at your registrar:
-   - For `CNAME`: Add `CNAME` record pointing to `username.github.io`
-   - For `A` records: Use GitHub's recommended IPs for apex domains
-
-## Jekyll and Build Tools
-
-GitHub Pages supports Jekyll by default, which allows you to add Markdown posts and compile SCSS. If you want to stick with plain HTML/CSS/JS, just commit those files directly.
-
-## Tips for Success
-
-1. **Keep it lightweight** - GitHub Pages has bandwidth limits, optimize images
-2. **Use HTTPS** - GitHub Pages provides free SSL certificates
-3. **Add a `.nojekyll` file** - If you have files/folders starting with `_` that shouldn't be processed by Jekyll
-4. **Use GitHub Actions** - For custom build processes or to automate deployments
-
-## Conclusion
-
-GitHub Pages is an excellent choice for personal portfolios, project showcases, and small websites. It's reliable, free, and integrates seamlessly with GitHub's ecosystem. With a bit of setup, your work can be live on the internet in minutes.
-
-*This is part of my ongoing learning journey in building robust, performant web experiences.*
-
-**Further Reading:**
-- [GitHub Pages Documentation](https://docs.github.com/en/pages)
-- [Setting up a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
           </div>
           <footer class="blog-post__footer">
             <div class="blog-post__tags">

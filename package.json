@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hasan2733/abid-portfolio#readme",
   "dependencies": {
-    "js-yaml": "^5.5.0"
+    "js-yaml": "^5.5.0",
+    "marked": "^18.1.2"
   }
 }
