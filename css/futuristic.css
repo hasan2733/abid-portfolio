@@ -494,7 +494,7 @@
 }
 
 /* Skill chip pulse on first view */
-.chip.is-pulsed {
+.skill-chip.is-pulsed {
   animation: chipPulse 0.65s ease;
 }
 
@@ -559,7 +559,7 @@
     transition: none;
   }
 
-  .chip.is-pulsed {
+  .skill-chip.is-pulsed {
     animation: none;
   }
 
