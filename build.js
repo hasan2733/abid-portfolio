@@ -325,7 +325,10 @@ function updateTestimonialsSection(content, html = indexContent) {
   const testimonialList = content.testimonials || [];
   const testimonialItems = testimonialList.map((test, i) => `
     <article class="testimonial-card reveal reveal-delay-${i + 1}">
-      <blockquote>${htmlEscape(test.quote || 'Abid is an exceptional developer with deep understanding of algorithms and clean code practices.')}</blockquote>
+      ${test.image ? `<img class="testimonial-card__photo" src="${htmlEscape(test.image)}" alt="${htmlEscape(test.name || 'Testimonial author')}" width="72" height="72" loading="lazy">` : ''}
+      <blockquote class="testimonial-card__quote">
+        <p>&ldquo;${htmlEscape(test.quote || 'Abid is an exceptional developer with deep understanding of algorithms and clean code practices.')}&rdquo;</p>
+      </blockquote>
       <cite class="testimonial-card__cite">
         <span class="testimonial-card__name">${htmlEscape(test.name || 'Dr. Sarah Mitchell')}</span>
         <span class="testimonial-card__role">${htmlEscape(test.role || 'Professor, Computer Science, Southeast University')}</span>
