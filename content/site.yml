@@ -70,10 +70,16 @@ certifications:
     date: "2024"
 
 testimonials:
-  - quote: "Abid's dedication to clean code and deep learning concepts is remarkable. He consistently delivers well-architected solutions."
-    name: "Dr. Sarah Mitchell"
-    role: "Professor, Computer Science, Southeast University"
-  - quote: "Working with Abid on the movie ticket system showed his strong full-stack abilities and attention to user experience."
+  - image: "./assets/images/testimonials/fazely_rabbi.jpg"
+    quote: "Abid is a great team player and always contributes positively to our group discussions."
+    name: "Md Fazly Rabbi"
+    role: "Group Member, ICPC preliminaries 2025"
+  - image: "./assets/images/testimonials/shanto.jpeg"
+    quote: "Abid always brings a positive attitude and valuable insights to our team meetings."
+    name: "Ashraful Islam Shanto"
+    role: "Group Member, ICPC preliminaries 2025"
+  - image: "./assets/images/testimonials/atikur_rahman.jpg"
+    quote: "Abid was a valuable member of our team, always contributing ideas and supporting his teammates."
     name: "Md Atikur Rahman"
     role: "Team Member, University group project"
 

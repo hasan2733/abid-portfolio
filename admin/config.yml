@@ -67,6 +67,7 @@ collections:
             name: "testimonials"
             widget: "list"
             fields:
+              - {label: "Image", name: "image", widget: "image"}
               - {label: "Quote", name: "quote", widget: "text"}
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Role", name: "role", widget: "string"}
