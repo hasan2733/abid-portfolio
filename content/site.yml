@@ -1,90 +1,112 @@
-hero_eyebrow: "Open to AI/ML Internships"
-hero_title: "Abid Hasan"
-hero_role: "Computer Science Student & Aspiring AI/ML Engineer"
-hero_tagline: "Building intelligent systems with a focus on Deep Learning and clean software engineering. Passionate about solving complex problems and continuous learning in the AI space."
-profile_image: "./assets/images/profile-placeholder.jpg"
-
+hero_eyebrow: Open to AI/ML Internships
+hero_title: Abid Hasan
+hero_role: Computer Science Student & Aspiring AI/ML Engineer
+hero_tagline: Building intelligent systems with a focus on Deep Learning and
+  clean software engineering. Passionate about solving complex problems and
+  continuous learning in the AI space.
+profile_image: ./assets/images/profile-placeholder.jpg
 about:
-  p1: "I am a third-year Computer Science and Engineering undergraduate at Southeast University and a 100% merit-based scholarship recipient. I have developed a strong foundation in C++, Data Structures, and Algorithms, which fuels my passion for software engineering and technical problem-solving."
-  p2: "My experience includes building versatile applications, such as a Movie Ticket Management System using JavaFX and a BMI & BMR Calculator for Android integrated with Firebase. I am proficient in Java, Python, and SQL, and I enjoy creating well-structured software that bridge the gap between complex backend logic and user-friendly interfaces."
-  p3: "Currently, I am specializing in Artificial Intelligence and Deep Learning, with hands-on experience in neural network architectures like ANN, CNN, and RNN. My goal is to contribute to AI research and build intelligent systems that solve real-world challenges through continuous learning and collaboration. My main goal is to secure a internship in the field of AI/ML."
-
+  p1: I am a fourth-year Computer Science and Engineering undergraduate at
+    Southeast University and a recipient of a 100% merit-based scholarship. I
+    have developed a strong foundation in C++, Data Structures, and Algorithms,
+    which drives my interest in Artificial Intelligence, Machine Learning, and
+    solving complex computational problems.
+  p2: My project experience spans software development, embedded systems, and
+    AI/ML. I have built applications such as a Movie Ticket Management System
+    using JavaFX, an Android-based BMI & BMR Calculator integrated with
+    Firebase, andSafeTrail, an ESP32-based embedded safety system featuring GPS
+    tracking, motion sensing, and geofencing. Additionally, I have completed
+    several beginner-to-intermediate Machine Learning and Deep Learning projects
+    and participated in on-site competitive programming contests, further
+    strengthening my practical skills and problem-solving abilities.
+  p3: Currently, I am specializing in Artificial Intelligence and Deep Learning,
+    with hands-on experience in machine learning algorithms, neural network
+    architectures, and frameworks such as TensorFlow and PyTorch. I am also
+    working on my undergraduate thesis, exploring advanced AI/ML techniques,
+    privacy-preserving learning, and real-world applications of deep learning.
+    My goal is to pursue a career in AI/ML research, contribute to meaningful
+    innovations, and develop intelligent systems that address real-world
+    challenges.
 education:
-  - badge: "University"
-    degree: "Bachelor of Science in Computer Science and Engineering"
-    dates: "October 2023 — Present"
-    school: "Southeast University"
+  - badge: University
+    degree: Bachelor of Science in Computer Science and Engineering
+    dates: October 2023 — Present
+    school: Southeast University
     details:
-      - "Coursework: Data Structures & Algorithms, Java Programming, Software Engineering, Computer Networking, AI and Digital Logic Design"
+      - "Coursework: Data Structures & Algorithms, Java Programming, Software
+        Engineering, Computer Networking, AI and Digital Logic Design"
       - "CGPA: 4.00 (Current)"
       - "Expected graduation: 2027"
-  - badge: "College"
-    degree: "Higher Secondary Certificate"
-    dates: "2020 — 2022"
-    school: "Major General Mahamudul Hasan Adarsha College, Tangail"
+  - badge: College
+    degree: Higher Secondary Certificate
+    dates: 2020 — 2022
+    school: Major General Mahamudul Hasan Adarsha College, Tangail
     details:
       - "Major subjects: Mathematics, Physics, and Chemistry."
-      - "Strong foundation in analytical and problem-solving skills."
+      - Strong foundation in analytical and problem-solving skills.
       - "GPA: 5.00"
-  - badge: "High School"
-    degree: "Secondary School Certificate"
-    dates: "2015 — 2020"
-    school: "Bindubashini Govt. Boys' High School, Tangail"
+  - badge: High School
+    degree: Secondary School Certificate
+    dates: 2015 — 2020
+    school: Bindubashini Govt. Boys' High School, Tangail
     details:
-      - "General curriculum with early interest in technology"
-      - "Built habits of discipline and consistent study"
+      - General curriculum with early interest in technology
+      - Built habits of discipline and consistent study
       - "GPA: 5.00"
-
 skills:
-  - category: "Languages"
-    items: "Java, Python, C++, SQL, JavaScript, HTML/CSS"
-  - category: "Frameworks & Libraries"
-    items: "React, Node.js, Express, JavaFX, Android SDK, Firebase"
-  - category: "AI/ML & Data"
-    items: "PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, OpenCV"
-  - category: "Tools & Platforms"
-    items: "Git, GitHub, Docker, Linux, VS Code, IntelliJ IDEA, MySQL, PostgreSQL"
-  - category: "Core CS"
-    items: "Data Structures & Algorithms, OOP, Operating Systems, Computer Networks, DBMS, Software Engineering"
-
+  - category: Languages
+    items: Java, Python, C++, SQL, JavaScript, HTML/CSS
+  - category: Frameworks & Libraries
+    items: React, Node.js, Express, JavaFX, Android SDK, Firebase
+  - category: AI/ML & Data
+    items: PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, OpenCV
+  - category: Tools & Platforms
+    items: Git, GitHub, Docker, Linux, VS Code, IntelliJ IDEA, MySQL, PostgreSQL
+  - category: Core CS
+    items: Data Structures & Algorithms, OOP, Operating Systems, Computer Networks,
+      DBMS, Software Engineering, Math & Statistics
 certifications:
-  - platform: "AI CERTs®"
-    title: "AI+ Prompt Engineer Level 1™"
-    description: "Foundational prompt engineering and AI-assisted workflows."
+  - platform: AI CERTs®
+    title: AI+ Prompt Engineer Level 1™
+    description: Foundational prompt engineering and AI-assisted workflows.
     date: "2025"
-  - platform: "Coursera"
-    title: "Data Science Math Skills - Duke University"
-    description: "Algebra, calculus, and statistics for data science."
+  - platform: Coursera
+    title: Data Science Math Skills - Duke University
+    description: Algebra, calculus, and statistics for data science.
     date: "2025"
-  - platform: "IBM"
-    title: "Introduction to Web Development (HTML, CSS, JS)"
-    description: "Core front-end building blocks and responsive layouts."
+  - platform: IBM
+    title: Introduction to Web Development (HTML, CSS, JS)
+    description: Core front-end building blocks and responsive layouts.
     date: "2024"
-  - platform: "Coursera"
-    title: "Neural Networks and Deep Learning - DeepLearning.AI"
-    description: "Foundations of neural networks, backpropagation, and deep learning frameworks."
+  - platform: Educative
+    title: Fundamentals of Machine Learning for Software Engineers
+    description: Explore machine learning's essentials for software engineers, delve
+      into supervised learning, neural networks, and deep learning, and gain
+      skills to tackle real-world data challenges effectively.
+    date: "2026"
+  - platform: Google
+    title: Google Cloud Fundamentals
+    description: Core Google Cloud services and infrastructure.
     date: "2024"
-  - platform: "Google"
-    title: "Google Cloud Fundamentals"
-    description: "Core Google Cloud services and infrastructure."
-    date: "2024"
-
 testimonials:
-  - image: "./assets/images/testimonials/fazely_rabbi.jpg"
-    quote: "Abid is a great team player and always contributes positively to our group discussions."
-    name: "Md Fazly Rabbi"
-    role: "Group Member, ICPC preliminaries 2025"
-  - image: "./assets/images/testimonials/shanto.jpeg"
-    quote: "Abid always brings a positive attitude and valuable insights to our team meetings."
-    name: "Ashraful Islam Shanto"
-    role: "Group Member, ICPC preliminaries 2025"
-  - image: "./assets/images/testimonials/atikur_rahman.jpg"
-    quote: "Abid was a valuable member of our team, always contributing ideas and supporting his teammates."
-    name: "Md Atikur Rahman"
-    role: "Team Member, University group project"
-
+  - image: ./assets/images/testimonials/fazely_rabbi.jpg
+    quote: Abid is a great team player and always contributes positively to our
+      group discussions.
+    name: Md Fazly Rabbi
+    role: Group Member, ICPC preliminaries 2025 & 2026
+  - image: ./assets/images/testimonials/shanto.jpeg
+    quote: Abid always brings a positive attitude and valuable insights to our team
+      meetings.
+    name: Ashraful Islam Shanto
+    role: Group Member, ICPC preliminaries 2025
+  - image: ./assets/images/testimonials/atikur_rahman.jpg
+    quote: Abid was a valuable member of our team, always contributing ideas and
+      supporting his teammates.
+    name: Md Atikur Rahman
+    role: Team Member, University group project
 contact:
-  description: "I am open to collaboration, internship opportunities, and questions about my work. Fill out the form or reach me directly."
-  email: "abid.hasan.tng@gmail.com"
-  form_endpoint: "https://formsubmit.co/abid.hasan.tng@gmail.com"
-  redirect_url: "https://abidhasan27.me/#contact"
+  description: I am open to collaboration, internship opportunities, and questions
+    about my work. Fill out the form or reach me directly.
+  email: abid.hasan.tng@gmail.com
+  form_endpoint: https://formsubmit.co/abid.hasan.tng@gmail.com
+  redirect_url: https://abidhasan27.me/#contact
