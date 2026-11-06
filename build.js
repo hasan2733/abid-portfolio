@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 const { marked } = require('marked');
@@ -17,11 +16,18 @@ function parseCmsFrontmatter(filePath) {
   if (lines.at(-1) === '') {
     lines.pop();
   }
+  const closingDelimiterIndex = lines.findIndex((line, index) => index > 0 && line === '---');
   const bodyLineIndex = lines.findIndex((line, index) => index > 0 && /^body:\s*/.test(line));
 
   if (bodyLineIndex === -1) {
-    const frontmatter = lines.slice(1, lines.at(-1) === '---' ? -1 : undefined).join('\n');
-    return { data: yaml.load(frontmatter, { schema: yaml.JSON_SCHEMA }) || {}, body: '' };
+    if (closingDelimiterIndex === -1) {
+      const frontmatter = lines.slice(1).join('\n');
+      return { data: yaml.load(frontmatter, { schema: yaml.JSON_SCHEMA }) || {}, body: '' };
+    }
+
+    const frontmatter = lines.slice(1, closingDelimiterIndex).join('\n');
+    const data = yaml.load(frontmatter, { schema: yaml.JSON_SCHEMA }) || {};
+    return { data, body: lines.slice(closingDelimiterIndex + 1).join('\n') };
   }
 
   const frontmatter = lines.slice(1, bodyLineIndex).join('\n');
