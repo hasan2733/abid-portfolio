@@ -1,96 +1,25 @@
 ---
-title: "Responsive Web Design Best Practices"
-date: 2024-10-30
-badge: "Responsive"
-excerpt: "Master responsive design techniques to ensure your website looks great on all devices and screen sizes."
-tags: "Responsive, CSS, Mobile"
-cover: ""
-body: "# Responsive Web Design Best Practices
-
-Master responsive design techniques to ensure your website looks great on all devices and screen sizes. In this post, we'll explore the fundamental principles and advanced strategies for creating websites that adapt seamlessly to any screen size.
-
-## Key Principles of Responsive Design
-
-### 1. Fluid Grid Systems
-Instead of fixed-width layouts, use relative units like percentages, `em`, `rem`, or `ch`. This allows elements to resize proportionally based on the viewport width.
-
-```css
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-```
-
-### 2. Flexible Images and Media
-Ensure images and videos scale with the viewport to prevent overflow and maintain visual consistency.
-
-```css
-img, video, canvas {
-  max-width: 100%;
-  height: auto;
-}
-```
-
-### 3. Media Queries
-Use media queries to apply different styles at specific breakpoints, tailoring the layout for different devices.
-
-```css
-@media (max-width: 768px) {
-  .nav__menu {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .hero__title {
-    font-size: 2rem;
-  }
-}
-```
-
-### 4. Viewport Meta Tag
-Always include the viewport meta tag in your HTML to ensure the page scales correctly on mobile devices.
-
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
-
-## Advanced Techniques
-
-### CSS Container Queries
-Container queries allow components to respond to the size of their parent container rather than the entire viewport, enabling more modular and reusable designs.
-
-```css
-@container (max-width: 400px) {
-  .card__image {
-    border-radius: 4px;
-  }
-}
-```
-
-### Viewport Units
-Use `vh` and `vw` units for typography and layout that scales with the viewport height and width.
-
-```css
-h1 {
-  font-size: calc(1.5rem + 3vw);
-}
-```
-
-## Testing Responsiveness
-
-Use browser developer tools to test your design across different device sizes. Chrome Devozilla offers device mode simulations for iPhone, iPad, and Android devices. Additionally, services like [BrowserStack](https://www.browserstack.com/) can help test on real devices.
-
-## Conclusion
-
-Responsive design is not a one-time task but an ongoing process. By combining fluid grids, flexible media, and strategic media queries, you can create websites that provide an optimal viewing experience across a wide range of devices. Start with a mobile-first approach, progressively enhancing the layout for larger screens, and always test on real devices to ensure accessibility and usability.
-
-*This post was written as part of my journey as a Computer Science student specializing in Artificial Intelligence and Deep Learning.*
-"
+title: "Pale Blue Dot: Reflections on our Place in the Cosmos"
+date: 2026-11-06
+badge: Astronomy & Philosophy
+excerpt: A reflection on NASA's iconic Pale Blue Dot photograph, Carl Sagan's
+  vision, and humanity's enduring quest for fundamental answers amidst rapid
+  technological progress.
+tags: Pale Blue Dot, Voyager 1, Carl Sagan, Astronomy, NASA, Philosophy,
+  Consciousness, Technology, Cosmos
+cover: https://science.nasa.gov/wp-content/uploads/2024/04/pale-blue-dot-revised.jpg?resize=1536,1520
+---
+*Figure: The Pale Blue Dot photograph taken Feb. 14, 1990, by NASA’s Voyager 1 at a distance of 3.7 billion miles (6 billion kilometers) from the Sun. Inspired Carl Sagan's book "Pale Blue Dot: A Vision of the Human Future in Space." (Updated "Pale Blue Dot Revisited" version created in 2020 for the 30th anniversary).*
+# **The Iconic Perspective**
+The Pale Blue Dot is a photograph of Earth taken Feb. 14, 1990, by NASA’s Voyager 1 at a distance of 3.7 billion miles (6 billion kilometers) from the Sun. The image inspired the title of scientist Carl Sagan's book, "Pale Blue Dot: A Vision of the Human Future in Space," in which he wrote: "Look again at that dot. That's here. That's home. That's us." The image, "Pale Blue Dot Revisited," was created in 2020 for the 30th anniversary of the iconic picture. The updated version used modern image-processing software and techniques to revisit the well-known Voyager view, while attempting to respect the original data and intent of those who planned the images.
+# **The Human Condition on a Dot**
+In this photograph, that tiny speck of light is our home planet. Every human tragedy, betrayal, morality, law, and crime along with all the self-obsessed beings who have ever lived - belongs right here. We often act as though we understand everything about our purpose, aims, and dreams, yet all of human history remains confined to that tiny blue dot, captured even from within our own solar system.
+# **Technological Progress vs. Fundamental Mysteries**
+We look forward to an era of rapid technological advancement, aspiring to build artificial general intelligence, humanoid robotics, and futuristic spacecraft. Yet, across thousands of years, our most fundamental questions remain unanswered:
+* Are we alone in the universe?  
+* What is consciousness, and can we ever create it?  
+* How did the universe actually form, and what existed before the Big Bang?  
+* Why does the cosmos appear so random, and do higher dimensions exist?  
+* We still struggle to define the essence of morality and ethics.
+# **Expanding Boundaries of Knowledge**
+As we continue to push the boundaries of knowledge, every answer we discover seems to reveal even deeper mysteries, reminding us of how much we have yet to comprehend.
