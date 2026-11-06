@@ -18,10 +18,13 @@ function parseCmsFrontmatter(filePath) {
     lines.pop();
   }
   const bodyLineIndex = lines.findIndex((line, index) => index > 0 && /^body:\s*/.test(line));
+  const closingDelimiterIndex = lines.findIndex((line, index) => index > 0 && /^---\s*$/.test(line));
 
   if (bodyLineIndex === -1) {
-    const frontmatter = lines.slice(1, lines.at(-1) === '---' ? -1 : undefined).join('\n');
-    return { data: yaml.load(frontmatter, { schema: yaml.JSON_SCHEMA }) || {}, body: '' };
+    const frontmatterEndIndex = closingDelimiterIndex === -1 ? undefined : closingDelimiterIndex;
+    const frontmatter = lines.slice(1, frontmatterEndIndex).join('\n');
+    const body = closingDelimiterIndex === -1 ? '' : lines.slice(closingDelimiterIndex + 1).join('\n');
+    return { data: yaml.load(frontmatter, { schema: yaml.JSON_SCHEMA }) || {}, body };
   }
 
   const frontmatter = lines.slice(1, bodyLineIndex).join('\n');
