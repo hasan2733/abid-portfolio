@@ -1,12 +1,9 @@
 ---
 title: SafeTrail
-description: >-
-  SafeTrail is a personal safety and emergency response wearable built around
-  the ESP32 microcontroller. It combines environmental sensing, motion analysis,
-  GPS tracking, geofencing, emergency alerting,[...]
-
-
-  The current implementation includes a K-Nearest Neighbors (KNN) risk classifier, geofence logic, OLED display status feedback, SMS fallback alerts, and ThingSpeak-based cloud monitoring.
+description: SafeTrail is a personal safety and emergency-response wearable
+  built around the ESP32 microcontroller. It combines environmental sensing,
+  motion analysis, GPS tracking, geofencing, emergency alerting, and cloud
+  monitoring in a compact embedded system.
 tech: C++, Arduino IDE, ESP32, GSM module, Neo-Gps
 github_url: https://github.com/hasan2733/SafeTrail
 video_url: https://www.youtube.com/watch?v=zX_D5FCz2U8
